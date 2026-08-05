@@ -22,13 +22,11 @@
 🚑 Zen Roleplay Ambulance
 </div>
 
-
 <nav>
 <a href="index.html">Home</a>
 <a href="handboek.html">Handboek</a>
 <a href="rapportage.html">Rapportage</a>
 </nav>
-
 
 </header>
 
@@ -40,31 +38,70 @@
 <div class="boek">
 
 
-<h2>📋 Ambulance Rapportageformulier</h2>
-
-<p>
-Vul na iedere belangrijke inzet een volledige rapportage in.
-</p>
+<h2>🚑 Ambulance Rapportage Portaal</h2>
 
 
+<div id="login">
 
-<h3>👤 Algemene informatie</h3>
+<h3>🔐 Ambulance toegang</h3>
+
+<label>Toegangscode</label>
+
+<input 
+id="code"
+type="password"
+placeholder="Ambulance code">
+
+
+<button onclick="controleerCode()">
+🔓 Inloggen
+</button>
+
+
+</div>
+
+
+
+
+<div id="rapportageFormulier" style="display:none;">
+
+
+<h3>👤 Medewerker informatie</h3>
 
 
 <label>Naam medewerker</label>
+
 <input id="medewerker" type="text">
 
 
+<label>🚑 Rang</label>
+
+<select id="rang">
+
+<option>Stagiair Ambulance</option>
+<option>Ambulance Medewerker</option>
+<option>Senior Ambulance Medewerker</option>
+<option>Hoofd Ambulance</option>
+
+</select>
+
+
+
 <label>Datum</label>
+
 <input id="datum" type="date">
 
 
 <label>Tijd</label>
+
 <input id="tijd" type="time">
 
 
 <label>Locatie melding</label>
+
 <input id="locatie" type="text">
+
+
 
 
 
@@ -72,11 +109,13 @@ Vul na iedere belangrijke inzet een volledige rapportage in.
 
 
 <label>Type incident</label>
+
 <textarea id="incident"></textarea>
 
 
 
 <label>Prioriteit</label>
+
 
 <select id="prioriteit">
 
@@ -95,13 +134,13 @@ Vul na iedere belangrijke inzet een volledige rapportage in.
 
 
 
-<h3>🩺 Patiënt informatie</h3>
+
+<h3>🩺 Patiënt</h3>
 
 
 <label>Naam patiënt</label>
 
 <input id="patient" type="text">
-
 
 
 <label>Klachten / letsel</label>
@@ -111,27 +150,28 @@ Vul na iedere belangrijke inzet een volledige rapportage in.
 
 
 
-<h3>ABCDE Beoordeling</h3>
+<h3>ABCDE</h3>
 
 
-<label>🅰️ Airway</label>
+<label>A - Airway</label>
 <textarea id="airway"></textarea>
 
 
-<label>🅱️ Breathing</label>
+<label>B - Breathing</label>
 <textarea id="breathing"></textarea>
 
 
-<label>🅲 Circulation</label>
+<label>C - Circulation</label>
 <textarea id="circulation"></textarea>
 
 
-<label>🅳 Disability</label>
+<label>D - Disability</label>
 <textarea id="disability"></textarea>
 
 
-<label>🅴 Exposure</label>
+<label>E - Exposure</label>
 <textarea id="exposure"></textarea>
+
 
 
 
@@ -151,7 +191,7 @@ Vul na iedere belangrijke inzet een volledige rapportage in.
 
 
 
-<label>Transport uitgevoerd</label>
+<label>Transport</label>
 
 <select id="transport">
 
@@ -169,13 +209,13 @@ Vul na iedere belangrijke inzet een volledige rapportage in.
 
 
 
+
 <h3>📝 Extra informatie</h3>
 
 
 <label>Bijzonderheden</label>
 
 <textarea id="bijzonderheden"></textarea>
-
 
 
 <label>Opmerkingen</label>
@@ -185,22 +225,19 @@ Vul na iedere belangrijke inzet een volledige rapportage in.
 
 
 
-<h3>✍️ Ondertekend</h3>
-
-
-<label>Ambulance medewerker</label>
+<label>Ondertekend door</label>
 
 <input id="ondertekening" type="text">
 
 
 
-
-<button id="verstuur" onclick="verstuurRapportage()">
-
+<button onclick="verstuurRapportage()">
 🚑 Rapportage verzenden
-
 </button>
 
+
+
+</div>
 
 
 </div>
@@ -210,26 +247,41 @@ Vul na iedere belangrijke inzet een volledige rapportage in.
 
 
 
-<footer>
-
-© 2026 Zen Roleplay Ambulance Dienst
-
-</footer>
-
-
-
-
 <script>
 
 
-// Datum en tijd automatisch invullen
-
-document.getElementById("datum").value =
-new Date().toISOString().split("T")[0];
+function controleerCode(){
 
 
-document.getElementById("tijd").value =
-new Date().toTimeString().slice(0,5);
+let code =
+document.getElementById("code").value;
+
+
+if(code === "ZEN-AMBU-2026"){
+
+
+document.getElementById("login").style.display="none";
+
+
+document.getElementById("rapportageFormulier").style.display="block";
+
+
+alert("✅ Toegang verleend");
+
+
+}
+
+else{
+
+
+alert("❌ Verkeerde toegangscode");
+
+
+}
+
+
+}
+
 
 
 
@@ -238,19 +290,16 @@ new Date().toTimeString().slice(0,5);
 async function verstuurRapportage(){
 
 
-const knop = document.getElementById("verstuur");
-
-knop.disabled = true;
-
-knop.innerHTML = "⏳ Verzenden...";
-
-
 
 const rapportage = {
 
 
 medewerker:
 document.getElementById("medewerker").value,
+
+
+rang:
+document.getElementById("rang").value,
 
 
 datum:
@@ -285,27 +334,17 @@ klachten:
 document.getElementById("klachten").value,
 
 
-
 ABCDE:
 `
-🅰️ Airway:
-${document.getElementById("airway").value}
+A: ${airway.value}
 
+B: ${breathing.value}
 
-🅱️ Breathing:
-${document.getElementById("breathing").value}
+C: ${circulation.value}
 
+D: ${disability.value}
 
-🅲 Circulation:
-${document.getElementById("circulation").value}
-
-
-🅳 Disability:
-${document.getElementById("disability").value}
-
-
-🅴 Exposure:
-${document.getElementById("exposure").value}
+E: ${exposure.value}
 `,
 
 
@@ -336,15 +375,32 @@ document.getElementById("opmerkingen").value,
 ondertekening:
 document.getElementById("ondertekening").value
 
-
 };
 
 
 
-try {
+
+if(
+!rapportage.medewerker ||
+!rapportage.rang ||
+!rapportage.incident
+){
+
+alert(
+"❌ Vul medewerker, rang en incident in!"
+);
+
+return;
+
+}
 
 
-const response = await fetch(
+
+
+try{
+
+
+let response = await fetch(
 
 "https://zen-ambulance-website.onrender.com/rapportage",
 
@@ -370,7 +426,7 @@ if(response.ok){
 
 
 alert(
-"✅ Rapportage succesvol verzonden naar Discord!"
+"✅ Rapportage verzonden!"
 );
 
 
@@ -382,11 +438,8 @@ location.reload();
 else{
 
 
-const fout = await response.text();
-
-
 alert(
-"❌ Backend fout:\n" + fout
+"❌ Backend heeft de rapportage geweigerd."
 );
 
 
@@ -399,29 +452,22 @@ alert(
 catch(error){
 
 
-console.error(error);
-
-
 alert(
 "❌ Backend niet bereikbaar."
 );
 
 
-}
-
-
-
-knop.disabled = false;
-
-knop.innerHTML =
-"🚑 Rapportage verzenden";
+console.log(error);
 
 
 }
+
+
+}
+
 
 
 </script>
-
 
 
 </body>
