@@ -1,43 +1,255 @@
+```html
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zen Roleplay | Ambulance Rapportage</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+🚑 Zen Roleplay Ambulance
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="handboek.html">Handboek</a>
+<a href="rapportage.html">Rapportage</a>
+</nav>
+
+</header>
+
+
+
+<section class="handboek">
+
+
+<div class="boek">
+
+
+<h2>📋 Ambulance Rapportageformulier</h2>
+
+<p>
+Na belangrijke inzetten is een rapportage verplicht.
+Vul alle gegevens volledig in.
+</p>
+
+
+
+<h3>👤 Algemene informatie</h3>
+
+
+<label>Naam medewerker</label>
+<input id="medewerker" type="text">
+
+
+<label>Datum</label>
+<input id="datum" type="date">
+
+
+<label>Tijd</label>
+<input id="tijd" type="time">
+
+
+<label>Locatie melding</label>
+<input id="locatie" type="text">
+
+
+
+<h3>🚨 Melding</h3>
+
+
+<label>Type incident</label>
+<textarea id="incident"></textarea>
+
+
+<label>Prioriteit</label>
+
+<select id="prioriteit">
+
+<option>P1 - Spoedmelding</option>
+<option>P2 - Dringende melding</option>
+<option>P3 - Normale melding</option>
+
+</select>
+
+
+
+<label>Betrokken personen</label>
+<textarea id="personen"></textarea>
+
+
+
+<h3>🩺 Patiënt informatie</h3>
+
+
+<label>Naam patiënt</label>
+<input id="patient" type="text">
+
+
+<label>Klachten / letsel</label>
+<textarea id="klachten"></textarea>
+
+
+
+<h3>ABCDE Beoordeling</h3>
+
+
+<label>🅰️ Airway</label>
+<textarea id="airway"></textarea>
+
+
+<label>🅱️ Breathing</label>
+<textarea id="breathing"></textarea>
+
+
+<label>🅲 Circulation</label>
+<textarea id="circulation"></textarea>
+
+
+<label>🅳 Disability</label>
+<textarea id="disability"></textarea>
+
+
+<label>🅴 Exposure</label>
+<textarea id="exposure"></textarea>
+
+
+
+<h3>🚑 Behandeling</h3>
+
+
+<label>Uitgevoerde handelingen</label>
+<textarea id="behandeling"></textarea>
+
+
+<label>Medicatie / materialen</label>
+<textarea id="materiaal"></textarea>
+
+
+
+<label>Transport uitgevoerd</label>
+
+<select id="transport">
+
+<option>Ja</option>
+<option>Nee</option>
+
+</select>
+
+
+
+<label>Bestemming</label>
+<input id="bestemming" type="text">
+
+
+
+<h3>📝 Extra informatie</h3>
+
+
+<label>Bijzonderheden</label>
+<textarea id="bijzonderheden"></textarea>
+
+
+<label>Opmerkingen</label>
+<textarea id="opmerkingen"></textarea>
+
+
+
+<h3>✍️ Ondertekend door</h3>
+
+
+<label>Ambulance medewerker</label>
+<input id="ondertekening" type="text">
+
+
+
+<button onclick="verstuurRapportage()">
+🚑 Rapportage verzenden
+</button>
+
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+© 2026 Zen Roleplay Ambulance Dienst
+
+</footer>
+
+
+
 <script>
 
 async function verstuurRapportage(){
 
+
 const rapportage = {
 
-medewerker: document.getElementById("medewerker").value,
 
-datum: document.getElementById("datum").value,
-
-tijd: document.getElementById("tijd").value,
-
-locatie: document.getElementById("locatie").value,
-
-incident: document.getElementById("incident").value,
-
-prioriteit: document.getElementById("prioriteit").value,
-
-personen: document.getElementById("personen").value,
-
-patient: document.getElementById("patient").value,
-
-klachten: document.getElementById("klachten").value,
+medewerker:
+document.getElementById("medewerker").value,
 
 
-ABCDE: `
-🅰️ Airway:
-${document.getElementById("airway").value}
+datum:
+document.getElementById("datum").value,
 
-🅱️ Breathing:
-${document.getElementById("breathing").value}
 
-🅲 Circulation:
-${document.getElementById("circulation").value}
+tijd:
+document.getElementById("tijd").value,
 
-🅳 Disability:
-${document.getElementById("disability").value}
 
-🅴 Exposure:
-${document.getElementById("exposure").value}
+locatie:
+document.getElementById("locatie").value,
+
+
+incident:
+document.getElementById("incident").value,
+
+
+prioriteit:
+document.getElementById("prioriteit").value,
+
+
+personen:
+document.getElementById("personen").value,
+
+
+patient:
+document.getElementById("patient").value,
+
+
+klachten:
+document.getElementById("klachten").value,
+
+
+ABCDE:
+`
+A: ${document.getElementById("airway").value}
+
+B: ${document.getElementById("breathing").value}
+
+C: ${document.getElementById("circulation").value}
+
+D: ${document.getElementById("disability").value}
+
+E: ${document.getElementById("exposure").value}
 `,
 
 
@@ -68,6 +280,7 @@ document.getElementById("opmerkingen").value,
 ondertekening:
 document.getElementById("ondertekening").value
 
+
 };
 
 
@@ -76,29 +289,37 @@ try {
 
 
 const response = await fetch(
+
 "https://zen-ambulance-website.onrender.com/rapportage",
+
 {
-method: "POST",
+
+method:"POST",
 
 headers:{
+
 "Content-Type":"application/json"
+
 },
 
-body: JSON.stringify(rapportage)
+body:JSON.stringify(rapportage)
 
-});
+}
+
+);
+
 
 
 if(response.ok){
 
 alert(
-"🚑 Rapportage succesvol verzonden naar de Ambulance dienst!"
+"✅ Rapportage succesvol verzonden!"
 );
 
 }else{
 
 alert(
-"❌ Er ging iets fout bij het verzenden."
+"❌ Rapportage kon niet worden verzonden."
 );
 
 }
@@ -120,3 +341,10 @@ alert(
 }
 
 </script>
+
+
+
+</body>
+
+</html>
+```
