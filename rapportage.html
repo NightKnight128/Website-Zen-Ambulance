@@ -1,446 +1,43 @@
-<!DOCTYPE html>
-<html lang="nl">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Zen Roleplay | Ambulance Rapportage</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-
-<body>
-
-
-<header>
-
-<div class="logo">
-🚑 Zen Roleplay Ambulance
-</div>
-
-
-<nav>
-<a href="index.html">Home</a>
-<a href="handboek.html">Handboek</a>
-<a href="rapportage.html">Rapportage</a>
-</nav>
-
-
-</header>
-
-
-
-
-
-<section class="handboek">
-
-
-<h2>
-📋 Ambulance Rapportageformulier
-</h2>
-
-
-<div class="boek">
-
-
-
-<h3>🚑 Zen Roleplay | Ambulance Rapportage</h3>
-
-<p>
-Na belangrijke inzetten is een rapportage verplicht.
-Vul alle gegevens zo volledig mogelijk in.
-</p>
-
-
-
-<hr>
-
-
-
-
-<h3>👤 Algemene informatie</h3>
-
-
-<label>
-Naam medewerker:
-</label>
-
-<input id="medewerker" type="text" placeholder="Naam medewerker">
-
-
-
-<label>
-Datum:
-</label>
-
-<input id="datum" type="date">
-
-
-
-<label>
-Tijd:
-</label>
-
-<input id="tijd" type="time">
-
-
-
-<label>
-Melding locatie:
-</label>
-
-<input id="locatie" type="text" placeholder="Locatie melding">
-
-
-
-
-
-<hr>
-
-
-
-
-
-<h3>🚨 Melding</h3>
-
-
-<label>
-Type incident:
-</label>
-
-<textarea id="incident" placeholder="Beschrijf het incident"></textarea>
-
-
-
-<label>
-Prioriteit:
-</label>
-
-
-<select id="prioriteit">
-
-<option>P1 - Spoedmelding</option>
-
-<option>P2 - Dringende melding</option>
-
-<option>P3 - Normale melding</option>
-
-</select>
-
-
-
-
-
-<label>
-Betrokken personen:
-</label>
-
-
-<textarea id="personen" placeholder="Betrokken personen"></textarea>
-
-
-
-
-
-
-
-<hr>
-
-
-
-
-
-<h3>🩺 Patiënt informatie</h3>
-
-
-
-<label>
-Naam patiënt:
-</label>
-
-
-<input id="patient" type="text" placeholder="Naam patiënt">
-
-
-
-
-
-<label>
-Klachten / letsel:
-</label>
-
-
-<textarea id="klachten" placeholder="Klachten of letsel"></textarea>
-
-
-
-
-
-
-
-<h3>
-ABCDE Beoordeling
-</h3>
-
-
-
-<label>
-🅰️ Airway (Luchtweg)
-</label>
-
-<textarea id="airway"></textarea>
-
-
-
-
-<label>
-🅱️ Breathing (Ademhaling)
-</label>
-
-<textarea id="breathing"></textarea>
-
-
-
-
-
-<label>
-🅲 Circulation (Circulatie)
-</label>
-
-<textarea id="circulation"></textarea>
-
-
-
-
-
-<label>
-🅳 Disability (Bewustzijn)
-</label>
-
-<textarea id="disability"></textarea>
-
-
-
-
-
-<label>
-🅴 Exposure (Inspectie)
-</label>
-
-<textarea id="exposure"></textarea>
-
-
-
-
-
-
-
-<hr>
-
-
-
-
-
-<h3>🚑 Behandeling</h3>
-
-
-
-<label>
-Uitgevoerde handelingen:
-</label>
-
-
-<textarea id="behandeling"></textarea>
-
-
-
-
-<label>
-Medicatie / materialen gebruikt:
-</label>
-
-
-<textarea id="materiaal"></textarea>
-
-
-
-
-
-
-<label>
-Transport uitgevoerd:
-</label>
-
-
-<select id="transport">
-
-<option>Ja</option>
-
-<option>Nee</option>
-
-</select>
-
-
-
-
-
-<label>
-Bestemming:
-</label>
-
-
-<input id="bestemming" type="text" placeholder="Ziekenhuis / locatie">
-
-
-
-
-
-
-
-<hr>
-
-
-
-
-
-<h3>📝 Extra informatie</h3>
-
-
-
-<label>
-Bijzonderheden:
-</label>
-
-
-<textarea id="bijzonderheden"></textarea>
-
-
-
-
-
-<label>
-Opmerkingen:
-</label>
-
-
-<textarea id="opmerkingen"></textarea>
-
-
-
-
-
-
-
-<hr>
-
-
-
-
-
-<h3>
-✍️ Ondertekend door
-</h3>
-
-
-
-<label>
-Ambulance medewerker:
-</label>
-
-
-<input id="ondertekening" type="text">
-
-
-
-
-
-
-
-<button onclick="verstuurRapportage()">
-📋 Rapportage verzenden
-</button>
-
-
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<footer>
-
-© 2026 Zen Roleplay Ambulance Dienst
-
-</footer>
-
-
-
-
-
 <script>
 
 async function verstuurRapportage(){
 
-
 const rapportage = {
 
+medewerker: document.getElementById("medewerker").value,
 
-medewerker:
-document.getElementById("medewerker").value,
+datum: document.getElementById("datum").value,
 
+tijd: document.getElementById("tijd").value,
 
-datum:
-document.getElementById("datum").value,
+locatie: document.getElementById("locatie").value,
 
+incident: document.getElementById("incident").value,
 
-tijd:
-document.getElementById("tijd").value,
+prioriteit: document.getElementById("prioriteit").value,
 
+personen: document.getElementById("personen").value,
 
-locatie:
-document.getElementById("locatie").value,
+patient: document.getElementById("patient").value,
 
-
-incident:
-document.getElementById("incident").value,
+klachten: document.getElementById("klachten").value,
 
 
-prioriteit:
-document.getElementById("prioriteit").value,
+ABCDE: `
+🅰️ Airway:
+${document.getElementById("airway").value}
 
+🅱️ Breathing:
+${document.getElementById("breathing").value}
 
-patient:
-document.getElementById("patient").value,
+🅲 Circulation:
+${document.getElementById("circulation").value}
 
+🅳 Disability:
+${document.getElementById("disability").value}
 
-klachten:
-document.getElementById("klachten").value,
-
-
-ABCDE:
-
-`
-A: ${document.getElementById("airway").value}
-
-B: ${document.getElementById("breathing").value}
-
-C: ${document.getElementById("circulation").value}
-
-D: ${document.getElementById("disability").value}
-
-E: ${document.getElementById("exposure").value}
+🅴 Exposure:
+${document.getElementById("exposure").value}
 `,
 
 
@@ -460,36 +57,66 @@ bestemming:
 document.getElementById("bestemming").value,
 
 
-extra:
+bijzonderheden:
+document.getElementById("bijzonderheden").value,
 
-`
-Bijzonderheden:
-${document.getElementById("bijzonderheden").value}
 
-Opmerkingen:
-${document.getElementById("opmerkingen").value}
-`
+opmerkingen:
+document.getElementById("opmerkingen").value,
 
+
+ondertekening:
+document.getElementById("ondertekening").value
 
 };
 
 
 
-console.log(rapportage);
+try {
 
+
+const response = await fetch(
+"https://botbackend.minecra.fr/rapportage",
+{
+method: "POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body: JSON.stringify(rapportage)
+
+});
+
+
+if(response.ok){
 
 alert(
-"✅ Rapportage klaar om te verzenden!"
+"🚑 Rapportage succesvol verzonden naar de Ambulance dienst!"
 );
 
+}else{
+
+alert(
+"❌ Er ging iets fout bij het verzenden."
+);
 
 }
 
 
+}
+
+catch(error){
+
+console.error(error);
+
+alert(
+"❌ Backend niet bereikbaar."
+);
+
+}
+
+
+}
+
 </script>
-
-
-
-</body>
-
-</html>
