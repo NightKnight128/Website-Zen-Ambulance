@@ -1,0 +1,861 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+
+body{
+
+    background:#050b14;
+    color:white;
+
+}
+
+
+
+/* HEADER */
+
+header{
+
+    background:linear-gradient(90deg,#b30000,#d90429);
+    height:85px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 60px;
+
+    box-shadow:0 5px 20px black;
+
+}
+
+
+.logo{
+
+    font-size:26px;
+    font-weight:bold;
+
+}
+
+
+nav a{
+
+    color:rgb(207, 195, 195);
+    text-decoration:none;
+
+    margin-left:25px;
+
+    font-weight:bold;
+
+}
+
+
+nav a:hover{
+
+    color:#00b4d8;
+
+}
+
+
+
+
+
+/* HERO */
+
+.hero{
+
+    height:650px;
+
+    display:flex;
+    align-items:center;
+
+    padding-left:80px;
+
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.75),
+        rgba(5,11,20,.95)
+    ),
+
+    url("images/ambulance.png");
+
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+
+
+
+.hero-text h1{
+
+    font-size:60px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.hero-text span{
+
+    color:#e63946;
+
+}
+
+
+
+.hero-text p{
+
+    margin-top:20px;
+
+    font-size:20px;
+
+    max-width:650px;
+
+    color:#d9e2ec;
+
+}
+
+
+
+
+
+button{
+
+    margin-top:30px;
+
+    background:#d90429;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 40px;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+button:hover{
+
+    background:#00b4d8;
+
+}
+
+
+
+
+
+/* SECTIONS */
+
+
+section{
+
+    padding:80px 10%;
+
+}
+
+
+
+h2{
+
+    text-align:center;
+
+    color:#e63946;
+
+    font-size:40px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+.center{
+
+    text-align:center;
+
+    color:#bfc9d4;
+
+    font-size:18px;
+
+}
+
+
+
+
+
+/* CARDS */
+
+
+.cards{
+
+    display:flex;
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+
+
+.card{
+
+
+    background:
+
+    linear-gradient(
+    145deg,
+    #101820,
+    #071018
+    );
+
+
+    padding:35px;
+
+    border-radius:15px;
+
+
+    border-left:5px solid #d90429;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.5);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-left-color:#00b4d8;
+
+}
+
+
+
+.card h3{
+
+    color:#00b4d8;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+
+/* RANGEN */
+
+
+.ranks{
+
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+
+}
+
+
+
+.ranks div{
+
+
+background:#101820;
+
+padding:30px;
+
+
+text-align:center;
+
+
+border-radius:12px;
+
+
+border-bottom:4px solid #d90429;
+
+
+font-weight:bold;
+
+
+}
+
+
+
+
+/* JOIN */
+
+
+#join{
+
+
+background:
+
+linear-gradient(
+90deg,
+#081018,
+#101820
+);
+
+
+text-align:center;
+
+
+}
+
+
+
+.discord{
+
+
+display:inline-block;
+
+margin-top:25px;
+
+
+background:#5865F2;
+
+
+padding:15px 45px;
+
+
+border-radius:10px;
+
+
+color:white;
+
+
+text-decoration:none;
+
+
+font-weight:bold;
+
+
+}
+
+
+
+
+
+footer{
+
+
+background:#b30000;
+
+
+padding:25px;
+
+
+text-align:center;
+
+
+}
+
+
+
+
+
+/* MOBIEL */
+
+
+@media(max-width:800px){
+
+
+header{
+
+flex-direction:column;
+
+height:auto;
+
+padding:25px;
+
+}
+
+
+.hero{
+
+padding:40px;
+
+}
+
+
+.hero-text h1{
+
+font-size:35px;
+
+}
+
+
+
+.cards{
+
+flex-direction:column;
+
+}
+
+
+
+.ranks{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+
+/* ==========================
+   AMBULANCE HANDBOEK
+========================== */
+
+.handboek {
+    padding: 90px 12%;
+}
+
+
+.handboek .boek {
+
+    background: linear-gradient(
+        145deg,
+        #101820,
+        #081018
+    );
+
+    padding:50px;
+
+    border-radius:20px;
+
+    border-left:6px solid #d90429;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.5);
+
+    line-height:1.8;
+
+}
+
+
+
+.handboek h2{
+
+    margin-bottom:50px;
+
+}
+
+
+
+.handboek h3{
+
+    color:#00b4d8;
+
+    font-size:25px;
+
+    margin-top:45px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.handboek p{
+
+    color:#d9e2ec;
+
+    font-size:17px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.handboek ul,
+.handboek ol{
+
+    margin-left:30px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.handboek li{
+
+    margin:12px 0;
+
+    color:#f1f1f1;
+
+}
+
+
+
+.handboek hr{
+
+    border:none;
+
+    height:2px;
+
+    background:#d90429;
+
+    margin:45px 0;
+
+}
+
+
+
+.handboek .warning{
+
+    border-left:5px solid #ffcc00;
+
+    background:#171717;
+
+    padding:25px;
+
+    border-radius:10px;
+
+}
+
+
+
+@media(max-width:800px){
+
+.handboek{
+
+    padding:40px 5%;
+
+}
+
+
+.handboek .boek{
+
+    padding:25px;
+
+}
+
+}
+
+/* ==========================
+   RAPPORTAGE FORMULIER
+   ZEN ROLEPLAY AMBULANCE
+========================== */
+
+
+.handboek {
+
+    padding:90px 12%;
+
+}
+
+
+
+.boek {
+
+
+    background:linear-gradient(
+        145deg,
+        #101820,
+        #081018
+    );
+
+
+    padding:50px;
+
+
+    border-radius:20px;
+
+
+    border-left:6px solid #d90429;
+
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.5);
+
+
+    line-height:1.8;
+
+}
+
+
+
+.boek h3{
+
+
+    color:#00b4d8;
+
+
+    font-size:26px;
+
+
+    margin-top:40px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.boek p{
+
+
+    color:#d9e2ec;
+
+
+    font-size:17px;
+
+
+}
+
+
+
+
+
+.boek hr{
+
+
+    border:none;
+
+
+    height:2px;
+
+
+    background:#d90429;
+
+
+    margin:45px 0;
+
+
+}
+
+
+
+
+
+/* FORMULIER VELDEN */
+
+
+.boek label{
+
+
+    display:block;
+
+
+    color:#ffffff;
+
+
+    font-weight:bold;
+
+
+    margin-top:20px;
+
+
+    margin-bottom:8px;
+
+
+    font-size:17px;
+
+
+}
+
+
+
+.boek input,
+.boek textarea,
+.boek select{
+
+
+    width:100%;
+
+
+    background:#050b14;
+
+
+    color:white;
+
+
+    border:1px solid #d90429;
+
+
+    border-radius:10px;
+
+
+    padding:15px;
+
+
+    font-size:16px;
+
+
+    outline:none;
+
+
+}
+
+
+
+
+
+.boek textarea{
+
+
+    min-height:120px;
+
+
+    resize:vertical;
+
+
+}
+
+
+
+
+
+.boek input:focus,
+.boek textarea:focus,
+.boek select:focus{
+
+
+    border-color:#00b4d8;
+
+
+    box-shadow:0 0 10px rgba(0,180,216,.4);
+
+
+}
+
+
+
+
+
+.boek select option{
+
+
+    background:#050b14;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+/* VERZEND KNOP */
+
+
+.boek button{
+
+
+    margin-top:40px;
+
+
+    width:100%;
+
+
+    background:#d90429;
+
+
+    color:white;
+
+
+    border:none;
+
+
+    padding:18px;
+
+
+    border-radius:10px;
+
+
+    font-size:18px;
+
+
+    font-weight:bold;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+.boek button:hover{
+
+
+    background:#00b4d8;
+
+
+    transform:translateY(-3px);
+
+
+}
+
+
+
+
+
+/* MOBIEL */
+
+
+@media(max-width:800px){
+
+
+.handboek{
+
+
+    padding:40px 5%;
+
+
+}
+
+
+
+.boek{
+
+
+    padding:25px;
+
+
+}
+
+
+
+}
