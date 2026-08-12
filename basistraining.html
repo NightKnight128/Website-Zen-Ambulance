@@ -1,0 +1,821 @@
+```html
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zen Roleplay | Theorie Basis Fase 1</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0f14;
+            color: #ffffff;
+            line-height: 1.7;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #d90429, #8b001b);
+            padding: 45px 20px;
+            text-align: center;
+            border-bottom: 4px solid #ffffff;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 17px;
+            opacity: 0.9;
+        }
+
+        /* NAV */
+        nav {
+            background: #111720;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #252d38;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #d90429;
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        /* INTRO */
+        .intro {
+            background: #121923;
+            border-left: 5px solid #d90429;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .intro h2 {
+            color: #ff334f;
+            margin-bottom: 10px;
+        }
+
+        /* SECTIONS */
+        .section {
+            background: #121923;
+            border: 1px solid #252d38;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .section h2 {
+            color: #ff334f;
+            margin-bottom: 20px;
+            font-size: 25px;
+            border-bottom: 1px solid #303946;
+            padding-bottom: 10px;
+        }
+
+        .section h3 {
+            color: #ffffff;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            margin-bottom: 12px;
+        }
+
+        /* TERM CARDS */
+        .terms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .term {
+            background: #0d131b;
+            border: 1px solid #2c3542;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .term h3 {
+            color: #ff334f;
+            margin-top: 0;
+        }
+
+        .term strong {
+            color: #ffffff;
+        }
+
+        /* ABC */
+        .abc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .abc-card {
+            background: #0d131b;
+            border-radius: 10px;
+            padding: 20px;
+            border-top: 4px solid #d90429;
+        }
+
+        .abc-card h3 {
+            color: #ff334f;
+            margin-top: 0;
+        }
+
+        /* LISTS */
+        ul,
+        ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 7px;
+        }
+
+        /* VITALS TABLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        th {
+            background: #d90429;
+            color: white;
+            padding: 14px;
+            text-align: left;
+        }
+
+        td {
+            padding: 13px;
+            border-bottom: 1px solid #303946;
+            background: #0d131b;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* QUOTE */
+        blockquote {
+            background: #0d131b;
+            border-left: 4px solid #d90429;
+            padding: 18px;
+            margin: 20px 0;
+            border-radius: 6px;
+            color: #dce1e7;
+            font-style: italic;
+        }
+
+        /* WARNING */
+        .warning {
+            background: rgba(217, 4, 41, 0.12);
+            border: 1px solid #d90429;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 20px;
+        }
+
+        .warning strong {
+            color: #ff334f;
+        }
+
+        /* TEST */
+        .test {
+            background: linear-gradient(135deg, #151d27, #10151d);
+            border: 2px solid #d90429;
+        }
+
+        .question {
+            background: #0d131b;
+            padding: 15px 18px;
+            margin: 10px 0;
+            border-radius: 7px;
+            border-left: 3px solid #d90429;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 50px;
+            background: #080b0f;
+            border-top: 1px solid #252d38;
+            padding: 30px;
+            text-align: center;
+            color: #8e99a6;
+        }
+
+        footer strong {
+            color: #d90429;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+                font-size: 14px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🚑 ZEN ROLEPLAY</h1>
+    <p>Theorie Basis Fase 1 — Ambulance</p>
+</header>
+
+<nav>
+    <a href="#termen">Basiskennis</a>
+    <a href="#begrippen">Begrippen</a>
+    <a href="#hoofdletsel">Hoofdletsel</a>
+    <a href="#vitals">Vitals</a>
+    <a href="#procedure">Procedure</a>
+    <a href="#kennistest">Kennistest</a>
+</nav>
+
+<main class="container">
+
+    <!-- INTRO -->
+    <section class="intro">
+        <h2>🩺 Theorie Basis Fase 1</h2>
+
+        <p>
+            Tijdens Basis Fase 1 leer je de belangrijkste medische termen,
+            basiskennis en procedures die je nodig hebt als Ambulance-medewerker
+            binnen Zen Roleplay.
+        </p>
+
+        <p>
+            Zorg ervoor dat je deze theorie goed begrijpt voordat je doorgaat
+            naar de praktijktraining.
+        </p>
+    </section>
+
+
+    <!-- 1 -->
+    <section class="section" id="termen">
+
+        <h2>📚 1. Belangrijke termen</h2>
+
+        <div class="terms">
+
+            <div class="term">
+                <h3>❤️ BPM — Beats Per Minute</h3>
+                <p>
+                    Het aantal <strong>hartslagen per minuut</strong>.
+                </p>
+                <p>
+                    Voorbeeld: "De patiënt heeft een hartslag van 80 BPM."
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>🫁 RPM — Respirations Per Minute</h3>
+                <p>
+                    Het aantal <strong>ademhalingen per minuut</strong>.
+                </p>
+                <p>
+                    Voorbeeld: "De patiënt heeft een ademhaling van 16 RPM."
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>🩸 SpO₂ — Zuurstofsaturatie</h3>
+                <p>
+                    Het percentage zuurstof in het bloed.
+                </p>
+                <p>
+                    Een normale waarde ligt meestal rond
+                    <strong>95–100%</strong>.
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>🌡️ Temp — Temperatuur</h3>
+                <p>
+                    De lichaamstemperatuur van de patiënt.
+                </p>
+                <p>
+                    Normaal ongeveer <strong>36–37,5°C</strong>.
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>💉 IV — Intraveneus</h3>
+                <p>
+                    Toediening van bijvoorbeeld medicatie of vocht
+                    <strong>via een ader</strong>.
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>🩸 HR — Heart Rate</h3>
+                <p>
+                    De hartslag van een patiënt.
+                </p>
+                <p>
+                    HR wordt vaak weergegeven in <strong>BPM</strong>.
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>🫁 RR — Respiratory Rate</h3>
+                <p>
+                    De ademhalingsfrequentie van een patiënt.
+                </p>
+                <p>
+                    RR wordt vaak weergegeven in <strong>RPM</strong>.
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>🧠 GCS — Glasgow Coma Scale</h3>
+                <p>
+                    Een manier om het <strong>bewustzijn</strong> van een patiënt
+                    te beoordelen.
+                </p>
+
+                <ul>
+                    <li>👁️ Oogreactie</li>
+                    <li>🗣️ Verbale reactie</li>
+                    <li>✋ Motorische reactie</li>
+                </ul>
+
+                <p>
+                    Een lagere score betekent over het algemeen een lager
+                    bewustzijnsniveau.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ABC -->
+    <section class="section">
+
+        <h2>🩺 ABC — Eerste beoordeling</h2>
+
+        <div class="abc-grid">
+
+            <div class="abc-card">
+                <h3>A — Airway</h3>
+                <p>
+                    Is de luchtweg vrij?
+                </p>
+            </div>
+
+            <div class="abc-card">
+                <h3>B — Breathing</h3>
+                <p>
+                    Ademt de patiënt normaal?
+                </p>
+            </div>
+
+            <div class="abc-card">
+                <h3>C — Circulation</h3>
+                <p>
+                    Is er een normale bloedsomloop en zijn er ernstige
+                    bloedingen?
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- 2 -->
+    <section class="section" id="begrippen">
+
+        <h2>🧠 2. Belangrijke medische begrippen</h2>
+
+        <div class="terms">
+
+            <div class="term">
+                <h3>Bewusteloos</h3>
+                <p>
+                    De patiënt reageert niet op aanspreken of prikkels.
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>Bewustzijn</h3>
+                <p>
+                    De mate waarin iemand wakker is en reageert op zijn omgeving.
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>Tachycardie</h3>
+                <p>
+                    Een <strong>snelle hartslag</strong>.
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>Bradycardie</h3>
+                <p>
+                    Een <strong>langzame hartslag</strong>.
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>Tachypneu</h3>
+                <p>
+                    Een <strong>snelle ademhaling</strong>.
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>Bradypneu</h3>
+                <p>
+                    Een <strong>langzame ademhaling</strong>.
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>Dyspneu</h3>
+                <p>
+                    Moeite met ademhalen / kortademigheid.
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>Hemorragie</h3>
+                <p>
+                    Een <strong>ernstige bloeding</strong>.
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>Trauma</h3>
+                <p>
+                    Letsel veroorzaakt door bijvoorbeeld een val,
+                    botsing of ander ongeval.
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>Contusie</h3>
+                <p>
+                    Een <strong>kneuzing</strong>.
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>Fractuur</h3>
+                <p>
+                    Een <strong>botbreuk</strong>.
+                </p>
+            </div>
+
+            <div class="term">
+                <h3>Syncope</h3>
+                <p>
+                    Een tijdelijke <strong>bewusteloosheid / flauwvallen</strong>.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- 3 -->
+    <section class="section" id="hoofdletsel">
+
+        <h2>🩹 3. Hoofdletsel</h2>
+
+        <p>
+            Bij de melding die je in de praktijk gaat krijgen heeft het
+            letsel met het hoofd te maken.
+        </p>
+
+        <h3>Let daarom op:</h3>
+
+        <ul>
+            <li>Bewustzijn</li>
+            <li>Ademhaling</li>
+            <li>Bloedingen</li>
+            <li>Hoofdpijn</li>
+            <li>Duizeligheid</li>
+            <li>Misselijkheid</li>
+            <li>Verwardheid</li>
+            <li>Geheugenverlies</li>
+            <li>Pijn</li>
+        </ul>
+
+        <div class="warning">
+            <strong>⚠️ Belangrijk:</strong>
+            iemand met mogelijk ernstig hoofdletsel moet je niet onnodig
+            verplaatsen.
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+    <section class="section" id="vitals">
+
+        <h2>📋 4. Vitals</h2>
+
+        <p>
+            <strong>Vitals</strong> zijn de belangrijkste meetwaarden
+            van een patiënt.
+        </p>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Meting</th>
+                    <th>Betekenis</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>❤️ BPM</td>
+                    <td>Hartslag</td>
+                </tr>
+
+                <tr>
+                    <td>🫁 RPM</td>
+                    <td>Ademhalingen per minuut</td>
+                </tr>
+
+                <tr>
+                    <td>🩸 SpO₂</td>
+                    <td>Zuurstofsaturatie</td>
+                </tr>
+
+                <tr>
+                    <td>🌡️ Temp</td>
+                    <td>Lichaamstemperatuur</td>
+                </tr>
+
+                <tr>
+                    <td>🧠 GCS</td>
+                    <td>Bewustzijn</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+    <!-- 5 -->
+    <section class="section" id="procedure">
+
+        <h2>🚨 5. Basisprocedure Fase 1</h2>
+
+        <h3>1️⃣ Veiligheid</h3>
+
+        <p>
+            Is de omgeving veilig?
+        </p>
+
+        <h3>2️⃣ Bewustzijn</h3>
+
+        <p>
+            Reageert de patiënt?
+        </p>
+
+        <h3>3️⃣ ABCDE-controle</h3>
+
+        <div class="abc-grid">
+
+            <div class="abc-card">
+                <h3>A — Airway</h3>
+
+                <p>Controleer de luchtweg.</p>
+
+                <ul>
+                    <li>Kan de patiënt praten?</li>
+                    <li>Is de luchtweg vrij?</li>
+                </ul>
+            </div>
+
+            <div class="abc-card">
+                <h3>B — Breathing</h3>
+
+                <p>Controleer de ademhaling.</p>
+
+                <ul>
+                    <li>Ademt de patiënt?</li>
+                    <li>Is de ademhaling normaal?</li>
+                    <li>Heeft de patiënt moeite met ademhalen?</li>
+                </ul>
+            </div>
+
+            <div class="abc-card">
+                <h3>C — Circulation</h3>
+
+                <p>Controleer de bloedsomloop.</p>
+
+                <ul>
+                    <li>Is er een pols?</li>
+                    <li>Is er sprake van hevig bloedverlies?</li>
+                    <li>Zijn er ernstige verwondingen?</li>
+                </ul>
+            </div>
+
+            <div class="abc-card">
+                <h3>D — Disability</h3>
+
+                <p>Controleer het bewustzijn.</p>
+
+                <ul>
+                    <li>Is de patiënt wakker?</li>
+                    <li>Reageert de patiënt?</li>
+                    <li>Is de patiënt verward?</li>
+                </ul>
+            </div>
+
+            <div class="abc-card">
+                <h3>E — Exposure</h3>
+
+                <p>Controleer het lichaam op zichtbare verwondingen.</p>
+
+                <ul>
+                    <li>Snijwonden</li>
+                    <li>Brandwonden</li>
+                    <li>Breuken</li>
+                    <li>Bloedingen</li>
+                    <li>Schotwonden</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+    <section class="section">
+
+        <h2>📻 6. Voorbeeld rapportage</h2>
+
+        <blockquote>
+            "Meldkamer, AMB-12. Wij zijn ter plaatse bij een patiënt die na
+            een val met het hoofd op de grond terecht is gekomen. Patiënt is
+            bij bewustzijn. BPM 82, RPM 16, SpO₂ 98% en GCS 15. Patiënt heeft
+            een hoofdwond en geeft hoofdpijn aan. Wij starten met behandeling."
+        </blockquote>
+
+    </section>
+
+
+    <!-- 7 -->
+    <section class="section test" id="kennistest">
+
+        <h2>📝 7. Kennistest</h2>
+
+        <p>
+            Zorg ervoor dat je onderstaande vragen kunt beantwoorden
+            voordat je doorgaat naar de praktijktraining.
+        </p>
+
+        <div class="question">
+            <strong>1.</strong> Wat betekent BPM?
+        </div>
+
+        <div class="question">
+            <strong>2.</strong> Wat betekent RPM?
+        </div>
+
+        <div class="question">
+            <strong>3.</strong> Wat meet SpO₂?
+        </div>
+
+        <div class="question">
+            <strong>4.</strong> Wat betekent GCS?
+        </div>
+
+        <div class="question">
+            <strong>5.</strong> Waar staat ABCDE voor?
+        </div>
+
+        <div class="question">
+            <strong>6.</strong> Wat is tachycardie?
+        </div>
+
+        <div class="question">
+            <strong>7.</strong> Wat is bradycardie?
+        </div>
+
+        <div class="question">
+            <strong>8.</strong> Wat is dyspneu?
+        </div>
+
+        <div class="question">
+            <strong>9.</strong> Wat is een trauma?
+        </div>
+
+        <div class="question">
+            <strong>10.</strong> Waar let je op bij hoofdletsel?
+        </div>
+
+        <div class="question">
+            <strong>11.</strong> Wat zijn vitals?
+        </div>
+
+        <div class="question">
+            <strong>12.</strong> Waarom verplaats je iemand met mogelijk
+            hoofdletsel niet onnodig?
+        </div>
+
+    </section>
+
+
+    <!-- DOEL -->
+    <section class="section">
+
+        <h2>🎯 Doel Fase 1</h2>
+
+        <p>
+            Na het behalen van de theorie moet je de
+            <strong>basis medische termen</strong>,
+            <strong>vital signs</strong> en de
+            <strong>ABCDE-controle</strong> begrijpen.
+        </p>
+
+        <p>
+            Daarna kun je door naar de
+            <strong>praktijktraining van Fase 1</strong>.
+        </p>
+
+        <div class="warning">
+            🚑 <strong>ZEN ROLEPLAY AMBULANCE</strong><br>
+            Professioneel • Realistisch • Veilig
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    🚑 <strong>ZEN ROLEPLAY AMBULANCE</strong><br>
+    Theorie Basis Fase 1
+</footer>
+
+</body>
+</html>
+```
