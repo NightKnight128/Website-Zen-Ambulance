@@ -15,10 +15,20 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+
     background:
-        radial-gradient(circle at 15% 10%, rgba(255, 125, 0, 0.14), transparent 30%),
-        radial-gradient(circle at 85% 20%, rgba(255, 165, 0, 0.08), transparent 30%),
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(255, 122, 0, 0.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(255, 145, 0, 0.08),
+            transparent 30%
+        ),
         #080808;
+
     color: #e7e7e7;
     line-height: 1.7;
     min-height: 100vh;
@@ -37,15 +47,20 @@ a {
     position: sticky;
     top: 0;
     z-index: 1000;
+
     height: 76px;
-    background: rgba(8, 8, 8, 0.92);
-    border-bottom: 1px solid rgba(255, 125, 0, 0.15);
+
+    background: rgba(8, 8, 8, 0.94);
+
+    border-bottom: 1px solid rgba(255, 122, 0, 0.18);
+
     backdrop-filter: blur(16px);
 }
 
 .nav-container {
     max-width: 1250px;
     height: 100%;
+
     margin: auto;
     padding: 0 25px;
 
@@ -58,6 +73,7 @@ a {
     font-size: 18px;
     font-weight: 800;
     letter-spacing: 1px;
+
     color: #ffffff;
 }
 
@@ -73,29 +89,36 @@ nav {
 
 nav a {
     padding: 10px 16px;
+
     border-radius: 8px;
+
     color: #aeb0b5;
+
     font-size: 14px;
     font-weight: 600;
+
     transition: 0.25s ease;
 }
 
 nav a:hover {
     color: #ffffff;
-    background: rgba(255, 125, 0, 0.08);
+
+    background: rgba(255, 122, 0, 0.08);
 }
 
 nav a.active {
     color: #ffffff;
-    background: rgba(255, 125, 0, 0.14);
+
+    background: rgba(255, 122, 0, 0.14);
 }
 
 /* =========================================================
-   HERO HOME
+   HERO
    ========================================================= */
 
 .hero {
     min-height: 560px;
+
     display: flex;
     align-items: center;
 
@@ -108,30 +131,36 @@ nav a.active {
         ),
         radial-gradient(
             circle at 75% 35%,
-            rgba(255, 125, 0, 0.18),
+            rgba(255, 122, 0, 0.18),
             transparent 35%
         );
 
-    border-bottom: 1px solid rgba(255, 125, 0, 0.10);
+    border-bottom: 1px solid rgba(255, 122, 0, 0.10);
 }
 
 .hero-content {
     width: 1250px;
     max-width: calc(100% - 50px);
+
     margin: auto;
 }
 
 .badge {
     display: inline-flex;
+
     padding: 7px 13px;
+
     border-radius: 999px;
 
-    background: rgba(255, 125, 0, 0.10);
-    border: 1px solid rgba(255, 125, 0, 0.25);
+    background: rgba(255, 122, 0, 0.10);
+
+    border: 1px solid rgba(255, 122, 0, 0.25);
 
     color: #ff922b;
+
     font-size: 11px;
     font-weight: 800;
+
     letter-spacing: 2px;
     text-transform: uppercase;
 
@@ -140,9 +169,13 @@ nav a.active {
 
 .hero h1 {
     font-size: clamp(48px, 7vw, 82px);
+
     line-height: 1.02;
+
     letter-spacing: -3px;
+
     color: #ffffff;
+
     margin-bottom: 25px;
 }
 
@@ -152,26 +185,34 @@ nav a.active {
 
 .hero p {
     max-width: 680px;
+
     color: #9ba0a8;
+
     font-size: 17px;
+
     line-height: 1.8;
 }
 
 .buttons {
     display: flex;
+
     gap: 12px;
+
     margin-top: 32px;
 }
 
 .btn {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
     min-width: 145px;
+
     padding: 13px 20px;
 
     border-radius: 9px;
+
     font-size: 14px;
     font-weight: 700;
 
@@ -180,72 +221,96 @@ nav a.active {
 
 .btn.primary {
     background: #ff7a00;
+
     color: #080808;
+
+    box-shadow: 0 0 20px rgba(255, 122, 0, 0.12);
 }
 
 .btn.primary:hover {
     background: #ff922b;
+
     transform: translateY(-2px);
+
+    box-shadow: 0 0 30px rgba(255, 122, 0, 0.22);
 }
 
 .btn.secondary {
     background: rgba(255, 255, 255, 0.04);
+
     border: 1px solid rgba(255, 255, 255, 0.12);
+
     color: #ffffff;
 }
 
 .btn.secondary:hover {
-    background: rgba(255, 125, 0, 0.08);
-    border-color: rgba(255, 125, 0, 0.25);
+    background: rgba(255, 122, 0, 0.08);
+
+    border-color: rgba(255, 122, 0, 0.25);
+
     transform: translateY(-2px);
 }
 
 /* =========================================================
-   INFORMATION HOME
+   INFORMATION
    ========================================================= */
 
 .information {
     max-width: 1250px;
+
     margin: auto;
+
     padding: 100px 25px 60px;
 }
 
 .section-title {
     max-width: 700px;
+
     margin-bottom: 45px;
 }
 
 .section-title > span {
     color: #ff7a00;
+
     font-size: 11px;
     font-weight: 800;
+
     letter-spacing: 2px;
 }
 
 .section-title h2 {
     margin-top: 8px;
+
     color: #ffffff;
+
     font-size: 40px;
+
     line-height: 1.2;
 }
 
 .section-title p {
     margin-top: 15px;
+
     color: #90949c;
 }
 
 .cards {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 20px;
 }
 
 .card {
     padding: 30px;
+
     min-height: 280px;
 
     background: rgba(255, 255, 255, 0.035);
+
     border: 1px solid rgba(255, 255, 255, 0.08);
+
     border-radius: 14px;
 
     transition: 0.3s ease;
@@ -253,8 +318,12 @@ nav a.active {
 
 .card:hover {
     transform: translateY(-5px);
-    border-color: rgba(255, 125, 0, 0.35);
-    background: rgba(255, 125, 0, 0.045);
+
+    border-color: rgba(255, 122, 0, 0.35);
+
+    background: rgba(255, 122, 0, 0.045);
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
 }
 
 .card-icon {
@@ -262,34 +331,49 @@ nav a.active {
     height: 48px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    background: rgba(255, 125, 0, 0.10);
-    border: 1px solid rgba(255, 125, 0, 0.15);
+    background: rgba(255, 122, 0, 0.10);
+
+    border: 1px solid rgba(255, 122, 0, 0.15);
+
     border-radius: 10px;
 
+    color: #ff7a00;
+
     font-size: 21px;
+
     margin-bottom: 20px;
 }
 
 .card h3 {
     color: #ffffff;
+
     font-size: 18px;
+
     margin-bottom: 10px;
 }
 
 .card p {
     color: #92969e;
+
     font-size: 14px;
+
     line-height: 1.7;
+
     margin-bottom: 20px;
 }
 
 .card a {
     color: #ff922b;
+
     font-size: 13px;
+
     font-weight: 700;
+
+    transition: 0.2s ease;
 }
 
 .card a:hover {
@@ -302,19 +386,24 @@ nav a.active {
 
 .notice-section {
     max-width: 1250px;
+
     margin: auto;
+
     padding: 20px 25px 100px;
 }
 
 .notice {
     display: flex;
+
     gap: 18px;
 
     padding: 25px;
 
     border-radius: 13px;
-    border: 1px solid rgba(255, 125, 0, 0.18);
-    background: rgba(255, 125, 0, 0.055);
+
+    border: 1px solid rgba(255, 122, 0, 0.18);
+
+    background: rgba(255, 122, 0, 0.055);
 }
 
 .notice-icon {
@@ -322,20 +411,26 @@ nav a.active {
     height: 42px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    background: rgba(255, 125, 0, 0.12);
+    background: rgba(255, 122, 0, 0.12);
+
+    color: #ff7a00;
+
     border-radius: 9px;
 }
 
 .notice h3 {
     color: #ffffff;
+
     margin-bottom: 5px;
 }
 
 .notice p {
     color: #9ca0a8;
+
     font-size: 14px;
 }
 
@@ -349,15 +444,21 @@ nav a.active {
 
 .apv-hero {
     max-width: 1250px;
+
     margin: auto;
+
     padding: 80px 25px 60px;
 }
 
 .apv-hero h1 {
     color: #ffffff;
+
     font-size: clamp(40px, 5vw, 64px);
+
     line-height: 1.1;
+
     letter-spacing: -2px;
+
     margin-bottom: 18px;
 }
 
@@ -367,7 +468,9 @@ nav a.active {
 
 .apv-hero p {
     max-width: 720px;
+
     color: #92969e;
+
     font-size: 16px;
 }
 
@@ -377,12 +480,17 @@ nav a.active {
 
 .layout {
     max-width: 1250px;
+
     margin: auto;
+
     padding: 0 25px 100px;
 
     display: grid;
+
     grid-template-columns: 250px minmax(0, 1fr);
+
     gap: 35px;
+
     align-items: start;
 }
 
@@ -392,23 +500,31 @@ nav a.active {
 
 .sidebar {
     position: sticky;
+
     top: 100px;
 
     padding: 20px;
 
     background: rgba(255, 255, 255, 0.035);
+
     border: 1px solid rgba(255, 255, 255, 0.08);
+
     border-radius: 13px;
 }
 
 .side-title {
     color: #ffffff;
+
     font-size: 13px;
+
     font-weight: 800;
+
     text-transform: uppercase;
+
     letter-spacing: 1px;
 
     padding-bottom: 15px;
+
     margin-bottom: 10px;
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -418,23 +534,28 @@ nav a.active {
     display: block;
 
     padding: 9px 11px;
+
     margin: 2px 0;
 
     color: #92969e;
+
     border-radius: 7px;
 
     font-size: 13px;
+
     transition: 0.2s ease;
 }
 
 .sidebar a:hover {
     color: #ffffff;
-    background: rgba(255, 125, 0, 0.09);
+
+    background: rgba(255, 122, 0, 0.09);
 }
 
 .sidebar a.active {
     color: #ff922b;
-    background: rgba(255, 125, 0, 0.12);
+
+    background: rgba(255, 122, 0, 0.12);
 }
 
 /* =========================================================
@@ -443,22 +564,27 @@ nav a.active {
 
 .search {
     position: relative;
+
     margin-bottom: 35px;
 }
 
 .search input {
     width: 100%;
+
     height: 52px;
 
     padding: 0 50px 0 17px;
 
     border: 1px solid rgba(255, 255, 255, 0.10);
+
     border-radius: 9px;
 
     background: rgba(255, 255, 255, 0.035);
+
     color: #ffffff;
 
     outline: none;
+
     font-size: 14px;
 
     transition: 0.25s ease;
@@ -469,17 +595,24 @@ nav a.active {
 }
 
 .search input:focus {
-    border-color: rgba(255, 125, 0, 0.55);
-    background: rgba(255, 125, 0, 0.045);
+    border-color: rgba(255, 122, 0, 0.55);
+
+    background: rgba(255, 122, 0, 0.045);
+
+    box-shadow: 0 0 20px rgba(255, 122, 0, 0.06);
 }
 
 .search span {
     position: absolute;
+
     right: 18px;
+
     top: 50%;
+
     transform: translateY(-50%);
 
     color: #ff7a00;
+
     font-size: 22px;
 }
 
@@ -489,22 +622,29 @@ nav a.active {
 
 .apv-section {
     scroll-margin-top: 100px;
+
     margin-bottom: 55px;
 }
 
 .apv-section > h2 {
     color: #ffffff;
+
     font-size: 27px;
+
     margin-bottom: 20px;
 
     display: flex;
+
     align-items: center;
+
     gap: 12px;
 }
 
 .apv-section > h2::after {
     content: "";
+
     height: 1px;
+
     flex: 1;
 
     background: rgba(255, 255, 255, 0.08);
@@ -516,28 +656,37 @@ nav a.active {
 
 .article {
     padding: 25px;
+
     margin-bottom: 14px;
 
     background: rgba(255, 255, 255, 0.032);
+
     border: 1px solid rgba(255, 255, 255, 0.075);
+
     border-radius: 12px;
 
     transition: 0.25s ease;
 }
 
 .article:hover {
-    border-color: rgba(255, 125, 0, 0.20);
+    border-color: rgba(255, 122, 0, 0.20);
+
+    background: rgba(255, 122, 0, 0.025);
 }
 
 .article h3 {
     color: #ffffff;
+
     font-size: 17px;
+
     margin-bottom: 13px;
 }
 
 .article p {
     color: #9ca0a8;
+
     font-size: 14px;
+
     margin-bottom: 12px;
 }
 
@@ -547,12 +696,15 @@ nav a.active {
 
 .article ul {
     margin: 12px 0 15px;
+
     padding-left: 22px;
 }
 
 .article li {
     color: #9ca0a8;
+
     font-size: 14px;
+
     margin: 5px 0;
 }
 
@@ -561,9 +713,12 @@ nav a.active {
     color: #e4e4e4;
 }
 
-/* Strafbepaling extra nadruk */
+/* =========================================================
+   STRAFBEPALING
+   ========================================================= */
+
 #strafbepaling .article {
-    border-color: rgba(255, 125, 0, 0.16);
+    border-color: rgba(255, 122, 0, 0.16);
 }
 
 #strafbepaling .article li b {
@@ -576,10 +731,13 @@ nav a.active {
 
 .subheading {
     color: #ffffff;
+
     font-size: 19px;
+
     font-weight: 800;
 
     margin: 30px 0 13px;
+
     padding-left: 12px;
 
     border-left: 3px solid #ff7a00;
@@ -591,14 +749,19 @@ nav a.active {
 
 .update-note {
     margin: 25px 0;
+
     padding: 14px 18px;
 
-    background: rgba(255, 125, 0, 0.07);
-    border: 1px solid rgba(255, 125, 0, 0.20);
+    background: rgba(255, 122, 0, 0.07);
+
+    border: 1px solid rgba(255, 122, 0, 0.20);
+
     border-radius: 9px;
 
     color: #ffb15c;
+
     font-size: 12px;
+
     letter-spacing: 0.5px;
 }
 
@@ -608,36 +771,48 @@ nav a.active {
 
 footer {
     margin-top: 50px;
+
     padding: 50px 25px 25px;
 
-    border-top: 1px solid rgba(255, 125, 0, 0.10);
+    border-top: 1px solid rgba(255, 122, 0, 0.10);
+
     background: #060606;
 }
 
 .footer-content {
     max-width: 1250px;
+
     margin: auto;
 
     display: flex;
+
     justify-content: space-between;
+
     gap: 40px;
 }
 
 .footer-content p {
     margin-top: 10px;
+
     color: #686b72;
+
     font-size: 13px;
 }
 
 .footer-links {
     display: flex;
+
     align-items: center;
+
     gap: 20px;
 }
 
 .footer-links a {
     color: #85888f;
+
     font-size: 13px;
+
+    transition: 0.2s ease;
 }
 
 .footer-links a:hover {
@@ -646,12 +821,15 @@ footer {
 
 .copyright {
     max-width: 1250px;
+
     margin: 35px auto 0;
+
     padding-top: 20px;
 
     border-top: 1px solid rgba(255, 255, 255, 0.06);
 
     color: #55585e;
+
     font-size: 12px;
 }
 
@@ -667,18 +845,23 @@ footer {
 
     .nav-container {
         padding: 15px 20px;
+
         flex-direction: column;
+
         gap: 12px;
     }
 
     nav {
         width: 100%;
+
         justify-content: center;
+
         flex-wrap: wrap;
     }
 
     nav a {
         padding: 7px 10px;
+
         font-size: 12px;
     }
 
@@ -696,6 +879,7 @@ footer {
 
     .sidebar {
         position: relative;
+
         top: 0;
     }
 
@@ -708,6 +892,10 @@ footer {
     }
 }
 
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 600px) {
 
     .hero-content {
@@ -716,6 +904,7 @@ footer {
 
     .hero h1 {
         font-size: 48px;
+
         letter-spacing: -2px;
     }
 
@@ -736,6 +925,7 @@ footer {
     .apv-hero,
     .layout {
         padding-left: 17px;
+
         padding-right: 17px;
     }
 
