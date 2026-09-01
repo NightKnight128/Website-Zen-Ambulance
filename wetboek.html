@@ -1,26 +1,81 @@
 <!DOCTYPE html>
-
 <html lang="nl">
-<head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Zen Roleplay | Wetboek</title><link href="style.css" rel="stylesheet"/></head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Het officiële Wetboek van Zen Roleplay.">
+  <title>Zen Roleplay | Wetboek</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
 <header class="navbar">
-    <div class="nav-container">
-
-        <a href="index.html" class="logo">
-            <span>ZEN</span> ROLEPLAY
-        </a>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="apv.html">APV</a>
-            <a href="wetboek.html" class="active">Wetboek</a>
-            <a href="sancties.html">Sancties</a>
-            <a href="wijzigingen.html">Wijzigingen</a>
-        </nav>
-
-    </div>
+  <div class="nav-container">
+    <a href="index.html" class="logo"><span>ZEN</span> ROLEPLAY</a>
+    <button class="menu-toggle" type="button" aria-label="Menu openen" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Hoofdnavigatie">
+      <a href="index.html">Home</a>
+      <a href="apv.html">APV</a>
+      <a href="wetboek.html" class="active">Wetboek</a>
+      <a href="sancties.html">Sancties</a>
+      <a href="wijzigingen.html">Wijzigingen</a>
+    </nav>
+  </div>
 </header>
-<main><section class="page-hero"><div class="eyebrow">OFFICIËLE REGELGEVING</div><h1>Zen Roleplay<br/><span>Wetboek</span></h1><p>Het officiële Wetboek van Zen Roleplay. Bekijk alle strafbare feiten, wetten, bepalingen en bijbehorende strafmaten.</p></section>
+
+<main>
+  <section class="page-hero">
+    <div class="hero-inner">
+      <div class="eyebrow">OFFICIËLE REGELGEVING</div>
+      <h1>Zen Roleplay<br><span>Wetboek</span></h1>
+      <p>Het officiële Wetboek van Zen Roleplay. Bekijk alle strafbare feiten, wetten, bepalingen en bijbehorende strafmaten.</p>
+    </div>
+  </section>
+
+  <div class="rule-layout">
+    <aside class="toc" id="toc">
+      <div class="toc-inner">
+        <div class="toc-head">
+          <span>WETBOEK</span>
+          <small>Inhoudsopgave</small>
+        </div>
+
+        <label class="search" for="search">
+          <span>⌕</span>
+          <input id="search" type="search" placeholder="Zoek artikel of delict..." autocomplete="off">
+        </label>
+
+        <div class="toc-group">
+          <div class="toc-title">Titels</div>
+          <a href="#titel-titel-i-vermogensdelicten">I · Vermogensdelicten</a>
+          <a href="#titel-titel-ii-geweldsdelicten">II · Geweldsdelicten</a>
+          <a href="#titel-titel-iii-verkeersdelicten">III · Verkeersdelicten</a>
+          <a href="#titel-titel-iv-opiumwet">IV · Opiumwet</a>
+          <a href="#titel-titel-v-wet-wapens-en-munitie">V · Wet Wapens en Munitie</a>
+          <a href="#titel-titel-vi-wet-op-de-kansspelen">VI · Wet op de Kansspelen</a>
+          <a href="#titel-titel-vii-uitsluitings-en-strafverminderingsgronden">VII · Uitsluitings- en strafverminderingsgronden</a>
+          <a href="#titel-titel-viii-overige">VIII · Overige</a>
+          <a href="#titel-titel-ix-schadevergoeding">IX · Schadevergoeding</a>
+          <a href="#titel-titel-x-algemene-douanewet">X · Algemene douanewet</a>
+          <a href="#titel-titel-xi-bewijs">XI · Bewijs</a>
+          <a href="#titel-titel-xi-politiegeweld">XI · Politiegeweld</a>
+        </div>
+
+        <button class="back-top" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Naar boven</button>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="content-card">
+        <div class="content-top">
+          <div>
+            <div class="section-kicker">ZEN ROLEPLAY</div>
+            <h2>Wetboek</h2>
+          </div>
+          <div class="article-count" id="articleCount"></div>
+        </div>
+
+        <div id="articles">
+          <section class="page-hero"><div class="eyebrow">OFFICIËLE REGELGEVING</div><h1>Zen Roleplay<br/><span>Wetboek</span></h1><p>Het officiële Wetboek van Zen Roleplay. Bekijk alle strafbare feiten, wetten, bepalingen en bijbehorende strafmaten.</p></section>
 <div class="rule-layout"><aside class="toc"><div class="toc-head">WETBOEK NAVIGATIE</div><div class="search"><span>⌕</span><input id="search" placeholder="Zoek artikel, delict of wet..." type="search"/></div><div class="toc-group"><div class="toc-title">Titels</div><a href="#titel-titel-i-vermogensdelicten">Titel I - Vermogensdelicten</a><a href="#titel-titel-ii-geweldsdelicten">Titel II - Geweldsdelicten</a><a href="#titel-titel-iii-verkeersdelicten">Titel III - Verkeersdelicten</a><a href="#titel-titel-iv-opiumwet">Titel IV - Opiumwet</a><a href="#titel-titel-v-wet-wapens-en-munitie">Titel V - Wet Wapens en Munitie</a><a href="#titel-titel-vi-wet-op-de-kansspelen">Titel VI - Wet op de Kansspelen</a><a href="#titel-titel-vii-uitsluitings-en-strafverminderingsgronden">Titel VII - Uitsluitings- en strafverminderingsgronden</a><a href="#titel-titel-viii-overige">Titel VIII - Overige</a><a href="#titel-titel-ix-schadevergoeding">Titel IX – Schadevergoeding</a><a href="#titel-titel-x-algemene-douanewet">Titel X – Algemene douanewet</a><a href="#titel-titel-xi-bewijs">Titel XI – Bewijs</a><a href="#titel-titel-xi-politiegeweld">Titel XI – Politiegeweld</a></div></aside><section class="content"><div id="articles"><p><strong>Wetboek Zen</strong>
 <strong>De maximum strafmaat is 150 maanden.</strong></p>
 <p>Een persoon mag maximaal 150 maanden gestuurd worden. Elke extra maand die persoon eigenlijk zou moeten krijgen, mag als boete van 1K per maand gerekend worden. De boete mag al uitgeschreven worden VOOR het transport.</p>
@@ -721,10 +776,78 @@ Tijdens de uitvoering van een BTGP richt de ambtenaar het dienstwapen op het voe
 </ul>
 <p>**Gemaakt door: **
 <em>Bram Jannsen</em></p>
-</section></div></section></div></main>
-<footer><div>© 2026 Zen Roleplay</div><div>Officiële regelgeving</div></footer>
+</section></div></section></div>
+        </div>
+
+        <div id="noResults" class="no-results" hidden>
+          <strong>Geen resultaten gevonden</strong>
+          <span>Probeer een andere zoekterm, bijvoorbeeld 'diefstal', 'wapen' of 'verkeer'.</span>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div>© 2026 Zen Roleplay</div>
+  <div>Officiële regelgeving</div>
+</footer>
+
 <script>
-const input=document.getElementById('search');
-const articles=[...document.querySelectorAll('.article')];
-input.addEventListener('input',()=>{const q=input.value.toLowerCase().trim();articles.forEach(a=>a.style.display=(!q||a.innerText.toLowerCase().includes(q))?'':'none');document.querySelectorAll('.rule-section').forEach(s=>{const has=[...s.querySelectorAll('.article')].some(a=>a.style.display!=='none');s.style.display=has?'':'none';});});
-</script></body></html>
+const input = document.getElementById('search');
+const articles = [...document.querySelectorAll('.article')];
+const sections = [...document.querySelectorAll('.rule-section')];
+const count = document.getElementById('articleCount');
+const noResults = document.getElementById('noResults');
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.main-nav');
+const tocLinks = [...document.querySelectorAll('.toc a')];
+
+function updateSearch() {
+  const q = input.value.toLowerCase().trim();
+  let visible = 0;
+
+  articles.forEach(article => {
+    const matches = !q || article.innerText.toLowerCase().includes(q);
+    article.hidden = !matches;
+    if (matches) visible++;
+  });
+
+  sections.forEach(section => {
+    const hasVisibleArticle = [...section.querySelectorAll('.article')].some(a => !a.hidden);
+    // Sections without .article content (such as special subsections) remain visible
+    // when there is no active search query.
+    section.hidden = q ? !hasVisibleArticle : false;
+  });
+
+  count.textContent = q ? `${visible} artikel${visible === 1 ? '' : 'en'} gevonden` : `${articles.length} artikelen`;
+  noResults.hidden = visible !== 0 || !q;
+}
+
+input.addEventListener('input', updateSearch);
+
+menuToggle.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', open);
+});
+
+tocLinks.forEach(link => link.addEventListener('click', () => {
+  nav.classList.remove('open');
+}));
+
+// Highlight the current title while scrolling.
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(link => link.classList.remove('current'));
+      const active = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('current');
+    }
+  });
+}, { rootMargin: '-20% 0px -70% 0px' });
+
+sections.forEach(section => observer.observe(section));
+updateSearch();
+</script>
+</body>
+</html>
