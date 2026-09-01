@@ -1,5 +1,6 @@
 /* =========================================================
    ZEN ROLEPLAY - OFFICIËLE REGELGEVING
+   THEMA: ZWART / ORANJE
    ========================================================= */
 
 * {
@@ -15,10 +16,10 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     background:
-        radial-gradient(circle at 15% 10%, rgba(70, 100, 180, 0.18), transparent 30%),
-        radial-gradient(circle at 85% 20%, rgba(100, 70, 180, 0.12), transparent 30%),
-        #080b11;
-    color: #e7eaf0;
+        radial-gradient(circle at 15% 10%, rgba(255, 125, 0, 0.14), transparent 30%),
+        radial-gradient(circle at 85% 20%, rgba(255, 165, 0, 0.08), transparent 30%),
+        #080808;
+    color: #e7e7e7;
     line-height: 1.7;
     min-height: 100vh;
 }
@@ -37,8 +38,8 @@ a {
     top: 0;
     z-index: 1000;
     height: 76px;
-    background: rgba(8, 11, 17, 0.88);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(8, 8, 8, 0.92);
+    border-bottom: 1px solid rgba(255, 125, 0, 0.15);
     backdrop-filter: blur(16px);
 }
 
@@ -61,7 +62,7 @@ a {
 }
 
 .logo span {
-    color: #7c9cff;
+    color: #ff7a00;
 }
 
 nav {
@@ -73,7 +74,7 @@ nav {
 nav a {
     padding: 10px 16px;
     border-radius: 8px;
-    color: #aeb5c4;
+    color: #aeb0b5;
     font-size: 14px;
     font-weight: 600;
     transition: 0.25s ease;
@@ -81,12 +82,12 @@ nav a {
 
 nav a:hover {
     color: #ffffff;
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 125, 0, 0.08);
 }
 
 nav a.active {
     color: #ffffff;
-    background: rgba(124, 156, 255, 0.14);
+    background: rgba(255, 125, 0, 0.14);
 }
 
 /* =========================================================
@@ -101,13 +102,17 @@ nav a.active {
     background:
         linear-gradient(
             90deg,
-            rgba(8, 11, 17, 0.98) 0%,
-            rgba(8, 11, 17, 0.88) 45%,
-            rgba(8, 11, 17, 0.60) 100%
+            rgba(8, 8, 8, 0.98) 0%,
+            rgba(8, 8, 8, 0.88) 45%,
+            rgba(8, 8, 8, 0.60) 100%
         ),
-        radial-gradient(circle at 75% 35%, rgba(80, 110, 220, 0.20), transparent 35%);
+        radial-gradient(
+            circle at 75% 35%,
+            rgba(255, 125, 0, 0.18),
+            transparent 35%
+        );
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 125, 0, 0.10);
 }
 
 .hero-content {
@@ -121,10 +126,10 @@ nav a.active {
     padding: 7px 13px;
     border-radius: 999px;
 
-    background: rgba(124, 156, 255, 0.10);
-    border: 1px solid rgba(124, 156, 255, 0.25);
+    background: rgba(255, 125, 0, 0.10);
+    border: 1px solid rgba(255, 125, 0, 0.25);
 
-    color: #8faaff;
+    color: #ff922b;
     font-size: 11px;
     font-weight: 800;
     letter-spacing: 2px;
@@ -142,12 +147,12 @@ nav a.active {
 }
 
 .hero h1 span {
-    color: #7c9cff;
+    color: #ff7a00;
 }
 
 .hero p {
     max-width: 680px;
-    color: #9ba3b2;
+    color: #9ba0a8;
     font-size: 17px;
     line-height: 1.8;
 }
@@ -174,12 +179,12 @@ nav a.active {
 }
 
 .btn.primary {
-    background: #7c9cff;
-    color: #080b11;
+    background: #ff7a00;
+    color: #080808;
 }
 
 .btn.primary:hover {
-    background: #91adff;
+    background: #ff922b;
     transform: translateY(-2px);
 }
 
@@ -190,7 +195,8 @@ nav a.active {
 }
 
 .btn.secondary:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 125, 0, 0.08);
+    border-color: rgba(255, 125, 0, 0.25);
     transform: translateY(-2px);
 }
 
@@ -210,7 +216,7 @@ nav a.active {
 }
 
 .section-title > span {
-    color: #7c9cff;
+    color: #ff7a00;
     font-size: 11px;
     font-weight: 800;
     letter-spacing: 2px;
@@ -225,7 +231,7 @@ nav a.active {
 
 .section-title p {
     margin-top: 15px;
-    color: #9098a8;
+    color: #90949c;
 }
 
 .cards {
@@ -247,8 +253,8 @@ nav a.active {
 
 .card:hover {
     transform: translateY(-5px);
-    border-color: rgba(124, 156, 255, 0.35);
-    background: rgba(124, 156, 255, 0.045);
+    border-color: rgba(255, 125, 0, 0.35);
+    background: rgba(255, 125, 0, 0.045);
 }
 
 .card-icon {
@@ -259,8 +265,8 @@ nav a.active {
     align-items: center;
     justify-content: center;
 
-    background: rgba(124, 156, 255, 0.10);
-    border: 1px solid rgba(124, 156, 255, 0.15);
+    background: rgba(255, 125, 0, 0.10);
+    border: 1px solid rgba(255, 125, 0, 0.15);
     border-radius: 10px;
 
     font-size: 21px;
@@ -274,14 +280,14 @@ nav a.active {
 }
 
 .card p {
-    color: #929aa9;
+    color: #92969e;
     font-size: 14px;
     line-height: 1.7;
     margin-bottom: 20px;
 }
 
 .card a {
-    color: #8faaff;
+    color: #ff922b;
     font-size: 13px;
     font-weight: 700;
 }
@@ -307,8 +313,8 @@ nav a.active {
     padding: 25px;
 
     border-radius: 13px;
-    border: 1px solid rgba(124, 156, 255, 0.18);
-    background: rgba(124, 156, 255, 0.055);
+    border: 1px solid rgba(255, 125, 0, 0.18);
+    background: rgba(255, 125, 0, 0.055);
 }
 
 .notice-icon {
@@ -319,7 +325,7 @@ nav a.active {
     align-items: center;
     justify-content: center;
 
-    background: rgba(124, 156, 255, 0.12);
+    background: rgba(255, 125, 0, 0.12);
     border-radius: 9px;
 }
 
@@ -329,7 +335,7 @@ nav a.active {
 }
 
 .notice p {
-    color: #9ca4b3;
+    color: #9ca0a8;
     font-size: 14px;
 }
 
@@ -356,12 +362,12 @@ nav a.active {
 }
 
 .apv-hero h1 span {
-    color: #7c9cff;
+    color: #ff7a00;
 }
 
 .apv-hero p {
     max-width: 720px;
-    color: #929aaa;
+    color: #92969e;
     font-size: 16px;
 }
 
@@ -414,7 +420,7 @@ nav a.active {
     padding: 9px 11px;
     margin: 2px 0;
 
-    color: #929aaa;
+    color: #92969e;
     border-radius: 7px;
 
     font-size: 13px;
@@ -423,7 +429,12 @@ nav a.active {
 
 .sidebar a:hover {
     color: #ffffff;
-    background: rgba(124, 156, 255, 0.09);
+    background: rgba(255, 125, 0, 0.09);
+}
+
+.sidebar a.active {
+    color: #ff922b;
+    background: rgba(255, 125, 0, 0.12);
 }
 
 /* =========================================================
@@ -454,12 +465,12 @@ nav a.active {
 }
 
 .search input::placeholder {
-    color: #687080;
+    color: #686b72;
 }
 
 .search input:focus {
-    border-color: rgba(124, 156, 255, 0.55);
-    background: rgba(124, 156, 255, 0.045);
+    border-color: rgba(255, 125, 0, 0.55);
+    background: rgba(255, 125, 0, 0.045);
 }
 
 .search span {
@@ -468,7 +479,7 @@ nav a.active {
     top: 50%;
     transform: translateY(-50%);
 
-    color: #7c9cff;
+    color: #ff7a00;
     font-size: 22px;
 }
 
@@ -515,7 +526,7 @@ nav a.active {
 }
 
 .article:hover {
-    border-color: rgba(124, 156, 255, 0.20);
+    border-color: rgba(255, 125, 0, 0.20);
 }
 
 .article h3 {
@@ -525,7 +536,7 @@ nav a.active {
 }
 
 .article p {
-    color: #9ca4b2;
+    color: #9ca0a8;
     font-size: 14px;
     margin-bottom: 12px;
 }
@@ -540,23 +551,23 @@ nav a.active {
 }
 
 .article li {
-    color: #9ca4b2;
+    color: #9ca0a8;
     font-size: 14px;
     margin: 5px 0;
 }
 
 .article b,
 .article strong {
-    color: #dce2ed;
+    color: #e4e4e4;
 }
 
 /* Strafbepaling extra nadruk */
 #strafbepaling .article {
-    border-color: rgba(124, 156, 255, 0.16);
+    border-color: rgba(255, 125, 0, 0.16);
 }
 
 #strafbepaling .article li b {
-    color: #8faaff;
+    color: #ff922b;
 }
 
 /* =========================================================
@@ -571,7 +582,7 @@ nav a.active {
     margin: 30px 0 13px;
     padding-left: 12px;
 
-    border-left: 3px solid #7c9cff;
+    border-left: 3px solid #ff7a00;
 }
 
 /* =========================================================
@@ -582,11 +593,11 @@ nav a.active {
     margin: 25px 0;
     padding: 14px 18px;
 
-    background: rgba(255, 190, 80, 0.07);
-    border: 1px solid rgba(255, 190, 80, 0.20);
+    background: rgba(255, 125, 0, 0.07);
+    border: 1px solid rgba(255, 125, 0, 0.20);
     border-radius: 9px;
 
-    color: #e9c987;
+    color: #ffb15c;
     font-size: 12px;
     letter-spacing: 0.5px;
 }
@@ -599,8 +610,8 @@ footer {
     margin-top: 50px;
     padding: 50px 25px 25px;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
-    background: #06080d;
+    border-top: 1px solid rgba(255, 125, 0, 0.10);
+    background: #060606;
 }
 
 .footer-content {
@@ -614,7 +625,7 @@ footer {
 
 .footer-content p {
     margin-top: 10px;
-    color: #687080;
+    color: #686b72;
     font-size: 13px;
 }
 
@@ -625,12 +636,12 @@ footer {
 }
 
 .footer-links a {
-    color: #858d9d;
+    color: #85888f;
     font-size: 13px;
 }
 
 .footer-links a:hover {
-    color: #ffffff;
+    color: #ff7a00;
 }
 
 .copyright {
@@ -640,7 +651,7 @@ footer {
 
     border-top: 1px solid rgba(255, 255, 255, 0.06);
 
-    color: #555d6c;
+    color: #55585e;
     font-size: 12px;
 }
 
