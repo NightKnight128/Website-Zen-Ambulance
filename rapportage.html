@@ -1,421 +1,119 @@
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Zen Roleplay | Ambulance Rapportage</title>
-
+<title>Zen Roleplay | APV</title>
 <link rel="stylesheet" href="style.css">
-
 </head>
-
-
 <body>
-
-
-<header>
-
-<div class="logo">
-🚑 Zen Roleplay Ambulance
-</div>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="handboek.html">Handboek</a>
-<a href="rapportage.html">Rapportage</a>
-</nav>
-
-</header>
-
-
-
-<section class="handboek">
-
-
-<div class="boek">
-
-
-<h2>🚑 Ambulance Rapportage</h2>
-
-<p>
-Vul na een belangrijke inzet een korte rapportage in.
-</p>
-
-
-
-<div id="login">
-
-<h3>🔐 Ambulance toegang</h3>
-
-<label>Toegangscode</label>
-
-<input 
-id="code"
-type="password"
-placeholder="Code">
-
-
-<button onclick="controleerCode()">
-🔓 Inloggen
-</button>
-
-</div>
-
-
-
-
-<div id="rapportageFormulier" style="display:none;">
-
-
-
-<h3>👤 Medewerker</h3>
-
-
-<label>Naam medewerker</label>
-
-<input id="medewerker" type="text">
-
-
-
-<label>🚑 Rang</label>
-
-<select id="rang">
-
-<option>In Opleiding</option>
-<option>Broeder/Zuster</option>
-<option>Verpleegkundige</option>
-<option>Geneeskundige</option>
-<option>Ambulance Leiding</option>
-
-</select>
-
-
-
-<label>📅 Datum</label>
-
-<input id="datum" type="date">
-
-
-
-<label>📍 Locatie melding</label>
-
-<input id="locatie" type="text">
-
-
-
-
-
-<h3>🚨 Melding</h3>
-
-
-<label>⚠️ Prioriteit</label>
-
-<select id="prioriteit">
-
-<option>P1 - Spoedmelding</option>
-<option>P2 - Dringende melding</option>
-<option>P3 - Normale melding</option>
-
-</select>
-
-
-
-<label>Beschrijving incident</label>
-
-<textarea id="incident"
-placeholder="Wat is er gebeurd?"></textarea>
-
-
-
-
-
-<h3>🩺 Patiënt</h3>
-
-
-<label>Naam patiënt</label>
-
-<input id="patient" type="text">
-
-
-
-<h3>🚑 Behandeling</h3>
-
-
-<label>Uitgevoerde handelingen</label>
-
-<textarea id="behandeling"
-placeholder="Wat heb je gedaan?"></textarea>
-
-
-
-<label>Transport uitgevoerd</label>
-
-<select id="transport">
-
-<option>Ja</option>
-<option>Nee</option>
-
-</select>
-
-
-
-<label>🏥 Bestemming</label>
-
-<input id="bestemming" type="text">
-
-
-
-<h3>✍️ Ondertekening</h3>
-
-
-<label>Ondertekend door</label>
-
-<input id="ondertekening" type="text">
-
-
-
-<button onclick="verstuurRapportage()">
-🚑 Rapportage verzenden
-</button>
-
-
-
-</div>
-
-
-</div>
-
+<header class="navbar"><div class="nav-container"><a class="logo" href="index.html"><span>ZEN</span> ROLEPLAY</a><nav><a href="index.html">Home</a><a class="active" href="apv.html">APV</a><a href="wetboek.html">Wetboek</a><a href="sancties.html">Sancties</a><a href="wijzigingen.html">Wijzigingen</a></nav></div></header>
+<main class="apv-page">
+<section class="apv-hero"><div class="badge">ZEN ROLEPLAY</div><h1>Zen Roleplay <span>APV</span></h1><p>De Algemene Plaatselijke Verordening van Zen Roleplay. Bekijk hieronder alle artikelen en geldende regels.</p></section>
+<div class="layout">
+<aside class="sidebar"><div class="side-title">Inhoudsopgave</div><a href="#strafbepaling">Strafbepaling</a><a href="#algemeen">Algemene regels</a><a href="#gangs">Gangregels</a><a href="#overig">Overige algemene regels</a><a href="#eiland">Eilandregels</a><a href="#staff">Staff & systemen</a><a href="#onderwereld">Onderwereld</a><a href="#overig2">Overig</a></aside>
+<section class="content">
+<div class="search"><input id="search" type="search" placeholder="Zoek in de APV, bijvoorbeeld: VDM, overvallen of Artikel 20..."><span>⌕</span></div>
+<div id="articles">
+<section class="apv-section" id="strafbepaling"><h2>Strafbepaling</h2><div class="article"><p>Binnen Zen Roleplay zijn straffen verdeeld in de volgende categorieën:</p><ul><li><b>Categorie 1:</b> 20 taken</li><li><b>Categorie 2:</b> 25 t/m 50 taken</li><li><b>Categorie 3:</b> 50 t/m 250 taken</li><li><b>Categorie 4:</b> 250 t/m 1000 taken</li><li><b>Categorie 5:</b> Ban tot maximaal 1 dag</li><li><b>Categorie 6:</b> Ban tot maximaal 1 week</li><li><b>Categorie 7:</b> Ban tot maximaal 1 maand</li><li><b>Categorie 8:</b> Account wipe</li><li><b>Categorie 9:</b> Permanente ban</li></ul><p><strong>Let op:</strong> wanneer een speler meerdere keren hetzelfde artikel overtreedt, kan een zwaardere straf worden opgelegd.</p><p>Een Sr. Admin of hoger behoudt altijd het recht om passende maatregelen te treffen in het belang van meerdere burgers en de server.</p><p>Daarnaast geldt: toxisch gedrag wordt binnen Zen Roleplay niet getolereerd. Hierop volgt direct een Discord-ban van 1 maand en 150 taken in-game.</p></div></section>
+<section class="apv-section" id="algemeen"><h2>Algemene regels</h2>
+<div class="article"><h3>Artikel 1 - Cheats</h3><p>Het is verboden om software, bestanden of instellingen aan te passen met als doel een oneerlijk voordeel te verkrijgen in-game.</p><p>Voorbeelden hiervan zijn onder andere:</p><ul><li>Cheat clients</li><li>Lua injectors</li><li>Crosshairs</li><li>Combat packs</li><li>Niet-toegestane resoluties of verhoudingen</li></ul><p>(alleen 16:9 en 16:10 zijn toegestaan, stretch is niet toegestaan)</p><p><b>Bij overtreding:</b> straf volgens categorie 9 (permanente ban).</p></div>
+<div class="article"><h3>Artikel 2 - Bug abuse / exploits</h3><p>Misbruik maken van bugs, glitches of exploits is streng verboden. Ontdek je een fout? Meld dit via een ticket in plaats van er voordeel uit te halen.</p><p>Voorbeelden van bug abuse / exploits:</p><ul><li>Misbruik maken van animaties</li><li>Het dupliceren van items</li><li>Gedupliceerde items niet melden na bijvoorbeeld een restart</li><li>Handelingen verrichten terwijl je dood bent</li><li>Reloggen om met volle levens terug te keren</li><li>Ragdollen</li></ul><p><b>Bij overtreding:</b> een stafflid bepaalt op basis van de situatie de straf, oplopend tot categorie 9 (permanente ban).</p></div>
+<div class="article"><h3>Artikel 3 - Meerdere accounts / karakters</h3><p>Het is niet toegestaan om meerdere Steam- of Discordaccounts te gebruiken om misbruik te maken van systemen of roleplay, tenzij hiervoor expliciet toestemming is gegeven door het staffteam.</p><p><b>Bij overtreding:</b> straf volgens categorie 9 (permanente ban).</p></div>
+<div class="article"><h3>Artikel 4 - Real life trading</h3><p>Het is in geen enkele situatie toegestaan om in-game geld, goederen of diensten te kopen, verkopen of ruilen voor echt geld of goederen buiten de stad. Het aanbieden of vragen hiervan valt hier ook onder.</p><p><b>Bij overtreding:</b> straf volgens categorie 9 (permanente ban).</p></div>
+<div class="article"><h3>Artikel 5 - Weggeven van goederen bij stoppen</h3><p>Wanneer een speler stopt met spelen, is het niet toegestaan om diens goederen of bezit weg te geven of aan te nemen.</p><p><b>Bij overtreding:</b> straf volgens categorie 9 (permanente ban).</p></div>
+<div class="article"><h3>Artikel 6 - VDM (Vehicle Deathmatch)</h3><p>Onder VDM verstaan wij het bewust gebruiken van een voertuig als wapen om iemand te verwonden of te doden.</p><p>Voorbeelden hiervan:</p><ul><li>Opzettelijk inrijden op groepen mensen</li><li>Iemand aanrijden zonder roleplay-aanleiding</li><li>Bewust een burger aanrijden met schade of dood als gevolg</li><li>Bewust op auto’s inrijden met de intentie om hem te stoppen.</li></ul><p><b>Bij overtreding:</b> een stafflid bepaalt op basis van de situatie de straf, oplopend tot categorie 9.</p></div>
+<div class="article"><h3>Artikel 7 - RDM (Random Deathmatch)</h3><p>RDM betekent het doden van een andere speler zonder geldige reden en/of zonder voorafgaande roleplay.</p><p>Voorbeelden:</p><ul><li>Iemand doden zonder enige roleplay-aanleiding</li><li>Iemand doden zonder geldige reden</li><li>Iemand vermoorden op basis van enkel verdenking</li><li>Een burger doden die geen directe dreiging vormt</li></ul><p><b>Let op:</b> provocerend gedrag, ook op social media, valt onder eigen verantwoordelijkheid en wordt niet automatisch gezien als RDM.</p><p><b>Bij overtreding:</b> straf wordt bepaald door staff, oplopend tot categorie 9.</p></div>
+<div class="article"><h3>Artikel 8 - Stream sniping</h3><p>Het bewust gebruiken van informatie uit iemands livestream om die persoon in-game op te zoeken of te benadelen is verboden. Dit kan ook vallen onder metagaming.</p><p><b>Bij overtreding:</b> straf volgens categorie 5 (ban van 3 dagen).</p></div>
+<div class="article"><h3>Artikel 9 - FailRP</h3><p>FailRP houdt in dat je opzettelijk een scenario verpest of niet op een realistische manier uitspeelt.</p><p>Voorbeelden van FailRP:</p><ul><li>Niet meewerken aan een roleplayscenario</li><li>Verkeerd gebruik maken van een /me-command</li><li>Verkeerd gebruik maken van een /do-command</li><li>Opzettelijk een verkeerde porto frequentie doorgeven</li><li>Je voertuig wegzetten tijdens een achtervolging om inbeslagname te voorkomen</li><li>Iemand vastbinden zonder dat er sprake is van bedreiging</li><li>Een voertuig stelen zonder aanleiding</li><li>Praten terwijl je dood bent</li><li>Praten in /me-command als je dood bent</li><li>Na een zware crash doorrijden terwijl dat niet realistisch is</li><li>Je overgeven en kort daarna alsnog een vuurwapen trekken</li><li>Na een schotwond in je been direct weer rennen of springen</li><li>(na opstaan 30 seconden stilstaan, daarna 30 seconden alleen lopen)</li><li>Gijzelen van agenten mag bij MINDER dan 7 agenten maar agenten mogen niet worden gebruikt als hostage</li><li>Max 3 hostage situaties per scenario</li><li>Actief schietincident: Ambulancepersoneel mag pas het incidentgebied betreden zodra de politie het gebied heeft veiliggesteld en toestemming geeft. Bij direct gevaar blijft ambulancepersoneel op veilige afstand wachten.</li></ul><p><b>Bij overtreding:</b> straf volgens categorie 3.</p><p>Daarnaast is het niet toegestaan om je voor te doen als overheidsmedewerker, met of zonder bijpassende kleding.</p><p><b>Bij overtreding:</b> straf volgens categorie 4</p></div>
+<div class="article"><h3>Artikel 10 - NVOL (No Value of Life)</h3><p>NVOL betekent dat een speler geen waarde hecht aan het leven van zijn of haar karakter.</p><p><b>Categorie 1 - Geen vuurwapen aanwezig bij degene die NVOL pleegt</b></p><p>Voorbeelden:</p><ul><li>Gevaarlijke stunts uitvoeren</li><li>Van daken springen</li><li>Weglopen van een gericht (steek) wapen of tazer</li><li>Rijdende blokkades uitvoeren</li><li>Hogere klasse voertuigen pitten</li><li>Niet meewerken terwijl er binnen 10 meter (3e praatcirkel) een vuurwapen op je gericht staat, ook in een bulletproof voertuig</li><li>Niet porto callen als je bent geboeid of als je in je benen bent geschoten</li><li>Bij steek- of slagwapens dien je binnen armlengte mee te werken</li><li>Meewerken met tazer gericht alleen verplicht als auto deur open is of raam kapot is bij dichte deur is meewerken niet verplicht indien ramen niet kapot zijn</li><li>Na tazeren niet meewerken terwijl de pinnen nog in je lichaam zitten</li><li>Terugschieten of steken terwijl er al een gericht wapen op je staat of je al onder schot staat</li><li>Rijdende blokkades zijn nooit toegestaan</li></ul><p><b>Bij overtreding:</b> straf volgens categorie 3.</p></div>
+<div class="article"><h3>Artikel 11 - New Life Rule</h3><p>Wanneer jouw personage overlijdt, moet je alle informatie rondom dat scenario vergeten.</p><p>Daaronder valt onder andere:</p><ul><li>Locaties van het incident</li><li>Wie je heeft gedood</li><li>De aanleiding van het scenario</li><li>De verdere situatie die zich heeft afgespeeld</li></ul><p>Wanneer je dood bent gegaan in een scenario, mag je niet opnieuw deelnemen aan datzelfde scenario.</p><p><b>Bij overtreding:</b> straf volgens categorie 1.</p></div>
+<div class="article"><h3>Artikel 12 - Overvallen</h3><p>Bij het starten van een overval gelden de volgende eisen:</p><ul><li>Winkeloverval: minimaal 3 agenten in dienst, 1 hostage</li><li>Kleine bankoverval: minimaal 4 agenten in dienst, 1 hostage</li><li>Grote overval (grote bank, Humane Labs, politie HB en soortgelijke scenario’s): minimaal 7 agenten in dienst, 3 hostages</li><li>Wachten na start overval 15 minuten op politie/defensie verplicht.</li><li>Een hostage mag geen vriend of bekende zijn.</li><li>1 hostage staat gelijk aan 1 eisen, ongeacht of dit een burger of agent is (vanaf hoofdagent is het 2 eisen).</li></ul><p><b>Bij overtreding:</b> straf volgens categorie 2.</p><p>Zodra de politie aanwezig is bij een overval, mag deze niet meer worden gecounterd.</p><p><b>Bij overtreding:</b> straf volgens categorie 3.</p></div>
+<div class="article"><h3>Artikel 13 - Powergaming</h3><p>Powergaming is het bewust forceren van onrealistische handelingen om daar zelf voordeel uit te halen.</p><p>Voorbeelden:</p><ul><li>Kledingstukken gebruiken om uit de gevangenis te ontsnappen</li><li>Voertuigen controleren zonder roleplay-aanleiding</li><li>Meerdere wapens afnemen via /me zonder vervolg-RP</li><li>Meerdere handelingen in één /me verwerken</li><li>Dragen/carryen zodat meer dan 2 personen op een motor kunnen</li><li>Iemand doden en daarna het lichaam meenemen om te dumpen</li><li>Iemand onder schot zetten en eisen dat die zijn volledige bankrekening overmaakt</li><li>Spelen op een resolutie die extreem voordeel oplevert</li><li>Overheidsmedewerkers dwingen om iemand te fouilleren voor illegale goederen</li><li>Een agent ontvoeren om uit het MEOS te worden gehaald</li><li>Een agent ontvoeren om te controleren of je signalement hebt</li><li>Loopholes in regels of systemen gebruiken voor eigen voordeel</li><li>Vluchten in je appartement tijdens een scenario</li><li>Binnen 10 minuten na het trekken van je wapen, na een scenario of na een achtervolging, je wapen wegleggen</li><li>Voertuigen te snel in de garage zetten bij illegale activiteiten</li><li>De Z-spier misbruiken om spelers te herkennen</li><li>Dashboardkastje of kofferbak gebruiken om kentekens te achterhalen</li><li>Nadat er gericht is geschoten vanuit criminelen op politie/defensie hebben politie/defensie het recht om dodelijk vuur te gebruiken in het water.</li></ul><p><b>Bij overtreding:</b> straf volgens categorie 3.</p></div>
+<div class="article"><h3>Artikel 14 - Karakter breken (OOC)</h3><p>Het is verboden om tijdens roleplay out of character termen te gebruiken die jouw karakter niet zou kennen.</p><p>Voorbeelden:</p><ul><li>Report</li><li>Staff</li><li>Ticket</li><li>VDM</li><li>RDM</li><li>Desync</li></ul><p>Ook is het niet toegestaan om tijdens een scenario een report te maken omdat het scenario verstorend is. Doe dit pas na afloop of open daarna een ticket.</p><p><b>Bij overtreding:</b> straf volgens categorie 1.</p></div>
+<div class="article"><h3>Artikel 15 - GTA Drivestyle</h3><p>GTA drivestyle betekent onrealistisch rijgedrag dat je in het echte leven ook niet zou vertonen.</p><p>Voorbeelden:</p><ul><li>Voertuigen zonder reden rammen of beuken</li><li>Met een on-road voertuig bewust off-road rijden</li><li>Met hoge snelheid door drukke gebieden rijden</li><li>Gebouwen inrijden</li><li>Opzettelijk ramps nemen</li><li>Objecten gebruiken om ergens overheen te springen</li><li>Harder dan 130 km/u rijden met een lekke band(automatisch stopt de auto)</li><li>Met boten bewust het land oprijden</li><li>Met een off-road motor hoger dan 3 meter springen</li><li>Hogere voertuigcategorieën pitten of brake checken</li></ul><p>Categorieën:</p><ul><li>Motorvoertuigen</li><li>Sportauto’s / hypercars</li><li>Personenauto’s</li><li>SUV’s</li><li>Bussen / vrachtwagens</li></ul><p>Ook vliegen zonder brevet is verboden.</p><p><b>Bij overtreding:</b> straf volgens categorie 2.</p></div>
+<div class="article"><h3>Artikel 16 - Geen intentie tot roleplay</h3><p>Wanneer je in de stad bent zonder intentie om op een realistische manier roleplay te spelen, valt dit onder geen intentie tot roleplay.</p><p>Hieronder vallen onder andere:</p><ul><li>Massa VDM</li><li>Massa RDM</li><li>Earrapen (zie artikel 24)</li></ul><p><b>Bij overtreding:</b> straf volgens categorie 9 (permanente ban).</p></div>
+<div class="article"><h3>Artikel 17 - Metagaming</h3><p>Metagaming is het gebruiken van informatie die je buiten de server hebt verkregen en vervolgens in-game toepast.</p><p>Voorbeelden:</p><ul><li>Informatie gebruiken uit Discordkanalen waar dat niet voor bedoeld is</li><li>Screensharen binnen Zen Roleplay</li><li>Niet gedempt zijn in Discord terwijl je in-game bent</li><li>Een website maken voor zaken zoals casino, cardealer of andere roleplay-gerelateerde diensten zonder toestemming van hogerop</li></ul><p><b>Bij overtreding:</b> straf volgens categorie 3.</p></div>
+<div class="article"><h3>Artikel 18 - Combatloggen</h3><p>Combatloggen is het verlaten van de server tijdens een actief roleplayscenario zonder geldige reden.</p><p>Wanneer je door technische problemen uit de stad wordt gegooid, heb je 5 minuten om terug te keren. Moet je echt weg? Bespreek dit eerst met de betrokken spelers.</p><p><b>Bij overtreding:</b> straf volgens categorie 5 (ban van 1 dag).</p></div>
+<div class="article"><h3>Artikel 19 - Oplichten</h3><p>Oplichten is in een aantal gevallen verboden en wordt bestraft.</p><p>Verboden vormen van oplichten:</p><ul><li>Bankgeld stelen of afnemen</li><li>Baan-gerelateerde voorwerpen afpakken</li><li>Overheidsvoorwerpen afpakken</li><li>Iemand onder dwang zijn huis laten betreden om leeg te roven</li><li>Oplichten met autohandel</li><li>Een gang joinen en binnen 4 weken wapendeals of leden rippen</li><li>Een eigen ganglid rippen dat korter dan 4 weken lid is</li></ul><p>Oplichten van zwart geld is toegestaan tot een maximum van 500k zolang dit een normaal en goed scenario gebeurd.</p><p>Oplichten is alleen toegestaan met spullen die duidelijk onderwereld-gerelateerd zijn, zoals drugs of wapens.</p><p><b>Bij overtreding:</b> straf volgens categorie 6 (ban van 1 week).</p><p>Voor specifieke gevallen zoals autoscam kan dit oplopen tot 1 maand ban.</p></div>
+<div class="article"><h3>Artikel 20 - Burgers overvallen</h3><p>Criminelen mogen burgers alleen onder specifieke voorwaarden overvallen.</p><p>Belangrijke regels:</p><ul><li>Als iemand goed meewerkt bij een overval op land, mag je diegene daarna niets aandoen</li><li>Je mag iemand alleen rippen als die aantoonbaar bezig is met onderwereldactiviteiten</li><li>Voorbeelden daarvan zijn: verwerken, verpakken, witwassen, rippen, uitstappen bij een verwerkplek, kloppen op een deur, deelnemen aan een overval of wapenbezit tonen</li><li>Ook gezichtsbedekkende kleding, holster, bodyvest of duidelijk illegale activiteit mag aanleiding zijn</li><li>Deze aanleiding blijft maximaal 30 minuten geldig nadat iemand uit beeld is geraakt</li><li>Vuurwapens mag je afnemen met elk categorie wapen indien dit passend bij het scenairo is</li><li>Steekwapens mogen met elk wapen worden gestolen</li><li>Van een ambtenaar in dienst mag niets worden afgepakt, tenzij het gaat om een crimineel gerelateerd wapen</li><li>Nieuwe spelers die voor het eerst de stad inkomen, mogen niet worden overvallen</li><li>Ontvoeren, bedreigen en bestelen mag alleen als iemand betrokken is bij criminele activiteiten</li><li>Fouilleren mag pas wanneer outfit en situatie overeenkomen</li></ul><p>De volgende zaken mogen nooit worden afgenomen:</p><ul><li>Geld op de bank</li><li>Overheidsvoorwerpen</li><li>Spullen in huizen of appartementen</li><li>Loodsen</li></ul><p><b>Bij overtreding:</b> straf volgens categorie 3.</p></div>
+<div class="article"><h3>Artikel 21 - Ongepast taalgebruik</h3><p>Beledigend, discriminerend of respectloos taalgebruik is verboden.</p><p>Voorbeelden:</p><ul><li>Schelden met ziektes zonder goede RP-aanleiding</li><li>Racistische of seksistische opmerkingen</li><li>Persoonlijke beledigingen</li><li>Familie erbij betrekken</li><li>Vrouwonvriendelijk gedrag</li></ul><p><b>Bij overtreding:</b> straf volgens categorie 1 t/m 9</p></div>
+<div class="article"><h3>Artikel 22 - Taalgebruik</h3><p>Van iedere speler wordt verwacht dat die de Nederlandse of Engelse taal voldoende beheerst. Andere talen mogen niet provocerend of beledigend worden gebruikt.</p><p><b>Bij overtreding:</b> straf volgens categorie 4.</p></div>
+<div class="article"><h3>Artikel 23 - Gebruik van boeien</h3><p>Wanneer iemand geboeid is, mag diegene niet meer communiceren via telefoon of portofoon. Overheidsmedewerkers mogen in die situatie ook geen noodknop gebruiken.</p><p><b>Bij overtreding:</b> straf volgens categorie 2.</p></div>
+<div class="article"><h3>Artikel 24 - Microfoon</h3><p>Iedere speler moet beschikken over een werkende en verstaanbare microfoon. Misbruik van je microfoon is verboden.</p><p>Voorbeelden:</p><ul><li>Earrape</li><li>Soundpads</li></ul><p><b>Bij overtreding:</b> straf volgens categorie 2.</p></div>
+<div class="article"><h3>Artikel 25 - Stemvervormers</h3><p>Stemvervormers zijn toegestaan zolang daar voldoende roleplay-aanleiding voor is en het menselijk blijft klinken.</p><p><b>Bij overtreding:</b> straf volgens categorie 1.</p></div>
+<div class="article"><h3>Artikel 26 - Report spam</h3><p>Je mag maximaal 1 report per 5 minuten aanmaken.</p><p><b>Bij overtreding:</b> straf volgens categorie 2.</p></div>
+<div class="article"><h3>Artikel 27 - Appartementen</h3><p>Criminele activiteiten in appartementen zijn verboden.</p><p>Denk aan:</p><ul><li>Scammen</li><li>Drugs verhandelen</li><li>Wapens inkopen of verkopen</li><li>Ontvoeren</li><li>Vermoorden</li></ul><p><b>Bij overtreding:</b> straf volgens categorie 3.</p></div>
+<div class="article"><h3>Artikel 28 - Achtervolgingen</h3><p>Tijdens een achtervolging mag je niet:</p><ul><li>Snel je kleding veranderen</li><li>Je voertuig in de garage zetten en een nieuwe pakken</li><li>Je appartement invluchten</li></ul><p>Dit mag pas zodra je de achtervolgers daadwerkelijk hebt afgeschud.</p><p><b>Bij overtreding:</b> straf volgens categorie 3.</p></div>
+<div class="article"><h3>Artikel 29 - Ontsnappen uit het cellencomplex</h3><p>Ontsnappen uit het cellencomplex is toegestaan, mits dit gebeurt met geldige en logische roleplay.</p><p>Het is niet toegestaan om een agent buiten dienst te ontvoeren om diegene te dwingen in dienst te gaan en vervolgens iemand vrij te krijgen.</p><p><b>Bij overtreding:</b> straf volgens categorie 1.</p></div>
+<div class="article"><h3>Artikel 30 - Campen van locaties</h3><p>Het campen van locaties is toegestaan als je een wapen bij je draagt. Heb je iemand overvallen op een locatie, dan mag je daar 30 minuten niet terugkomen.</p><p>Het campen van niet-actieve drugslocaties is niet toegestaan.</p><p><b>Bij overtreding:</b> straf volgens categorie 4.</p></div>
+<div class="article"><h3>Artikel 31 - Standaard outfit</h3><p>Het dragen van de standaard outfit waarmee je de eerste keer de stad binnenkomt, is niet toegestaan. Dit is om te voorkomen dat iedereen er hetzelfde uitziet.</p><p><b>Bij overtreding:</b> straf volgens categorie 2.</p></div>
+<div class="article"><h3>Artikel 32 - Impersonatie van overheidsmedewerkers</h3><p>Het is verboden om je te kleden als een overheidsmedewerker of stafflid en dit beroep na te bootsen.</p><p><b>Bij overtreding:</b> straf volgens categorie 3.</p></div>
+<div class="article"><h3>Artikel 33 - Corruptie</h3><p><b>Categorie 1</b><br>Money farmen binnen een overheidsbaan</p><p><b>Straf:</b> categorie 4</p><p><b>Categorie 2</b><br>Criminele handelingen uitvoeren als uitdienst overheidsmedewerker</p><p><b>Straf:</b> categorie 7 + 8</p><p><b>Categorie 3</b><br>Verduisteren van geld of items als politie/KMAR</p><p>Zeer gevoelige informatie doorspelen aan criminelen, zoals:</p><ul><li>MEOS-informatie</li><li>Documenten</li><li>Interne gegevens</li></ul><p><b>Straf:</b> categorie 9 (permanente ban)</p></div>
+<div class="article"><h3>Artikel 34 - Jobhoppen</h3><p>Bij het wisselen van baan tussen criminele organisaties en overheidsinstanties, of tussen verschillende overheidsinstanties, geldt een wachttijd van 3 dagen.</p><p><b>Bij overtreding:</b> straf volgens categorie 4</p></div>
+<div class="article"><h3>Artikel 35 - Staff</h3><p>Respect richting staffleden is verplicht. Ook wanneer je het niet eens bent met een stafflid, heeft staff altijd het laatste woord. Het verstoren van staffzaken is niet toegestaan.</p><p>Ook onnodig reports of staffzaken starten is verboden.</p><p><b>Bij overtreding:</b> straf volgens categorie 2</p></div>
+<div class="article"><h3>Artikel 35A - Staff</h3><p>Liegen tegen staffleden is verboden. Het bedreigen of beledigen van staffleden is eveneens verboden.</p><p><b>Bij overtreding:</b> straf volgens categorie 9 (permanente ban).</p></div>
+<div class="article"><h3>Artikel 36 - Copbaiten</h3><p>Copbaiten betekent dat je politie of andere overheidsdiensten bewust provoceert, opzoekt of uitlokt.</p><p>Ben je niet betrokken bij een scenario, dan hoor je ook niet aanwezig te zijn bij bijvoorbeeld aanhoudingen of overvallen.</p><p><b>Bij overtreding:</b> straf volgens categorie 2</p></div>
+<div class="article"><h3>Artikel 37 - Verstoring van roleplay</h3><p>Het is verboden om bewust de roleplay van andere spelers te verstoren.</p><p>Voorbeelden:</p><ul><li>Cirkels blokkeren met voertuigen</li><li>Lopende scenario’s verstoren</li></ul><p><b>Bij overtreding:</b> straf volgens categorie 2</p></div>
+<div class="article"><h3>Artikel 38 - Stemherkenning</h3><p>Het herkennen van iemand aan zijn of haar stem is toegestaan, tenzij je die persoon eigenlijk helemaal niet kent.</p><p>Wanneer iemand duidelijk probeert anders te praten dan normaal, mag de stem niet herkend worden.</p><p>Externe software voor stemvervorming is toegestaan zolang dit normaal en menselijk klinkt. Robot- of babystemmen zijn verboden.</p><p><b>Bij overtreding:</b> straf volgens categorie 2</p></div>
+<div class="article"><h3>Artikel 39 - Illegale activiteiten op social media</h3><p>Het is verboden om illegale activiteiten zoals wapenhandel, drugs of illegale locaties te plaatsen op social media, behalve via Dark Web of privéberichten.</p><p>Ook codewoorden die hier indirect naar verwijzen zijn verboden.</p><p><b>Bij overtreding:</b> straf volgens categorie 2</p></div>
+<div class="article"><h3>Artikel 40 - Regels rondom hostages</h3><p>Bij het nemen van gijzelaars gelden de volgende regels:</p><ul><li>Een outside hostage is niet toegestaan</li><li>Een hostage mag geen vriend, kennis of familielid zijn</li><li>Er moeten minimaal 2 agenten aanwezig zijn om iemand te kunnen gijzelen</li><li>Vanaf 3 agenten aanwezig mogen ook agenten gegijzeld worden, mits daar goede roleplay achter zit</li><li>Een onderhandelaar mag nooit beschoten of gegijzeld worden tijdens onderhandelingen</li><li>Vanaf hoofdagent is het 2 eisen</li></ul><p><b>Bij overtreding:</b> straf volgens categorie 2</p></div>
+<div class="article"><h3>Artikel 41 - Criminele activiteiten tegen overheidsmedewerkers</h3><p>Het ontvoeren of doden van ambulance-, ANWB- of taximedewerkers in dienst is verboden.</p><p>Verder geldt:</p><p><b>Overheidsvoertuigen</b></p><p>Burgers mogen geen enkele overheidsvoertuigen stelen of besturen.</p><p>Uitzondering, bij een goede RP scenario is dit toegestaan.</p><p>Maar probeer wel zo snel mogelijk een andere voertuig te zoeken.</p><p><b>Bij overtreding:</b> straf volgens categorie 3</p></div>
+<div class="article"><h3>Artikel 42 - Bounty’s / beloningen</h3><p>Het plaatsen van een bounty op iemand is verboden.</p><p>Het is wel toegestaan om een beloning uit te loven voor het ontvoeren van iemand met als doel diegene te verhoren.</p><p><b>Bij overtreding:</b> straf volgens categorie 2</p></div>
+<div class="article"><h3>Artikel 43 - Gebruik van vuurwapens</h3><p>Het onnodig of onterecht gebruiken van een vuurwapen is verboden. Er moet altijd een geldige roleplay-reden zijn.</p><p>Een ambtenaar buiten dienst mag zijn of haar dienstwapen niet bij zich dragen.</p><p><b>Bij overtreding:</b> straf volgens categorie 3</p></div>
 </section>
-
-
-
-<footer>
-
-© 2026 Zen Roleplay Ambulance Dienst
-
-</footer>
-
-
+<section class="apv-section" id="gangs"><h2>Gangregels</h2>
+<div class="article"><h3>Artikel 44 - Roleplay & aantal leden gangs</h3><p>Een gang mag maximaal 20 leden hebben en minimaal 4 leden.</p><p>Het toegestane aantal leden kan door ontwikkelingen binnen de stad periodiek worden aangepast.</p><p>Samenwerken met andere groeperingen binnen scenario’s is niet toegestaan zonder goedkeuring. Alleen voor handel in goederen zoals drugs of wapens kan een uitzondering gelden.</p><p>Op het eiland mogen officiële groepen niet samenwerken met andere officiële of onofficiële groepen of personen.</p><p><b>Bij overtreding:</b> gangwarn en straf volgens categorie 2 voor de eigenaren.</p></div>
+<div class="article"><h3>Artikel 45 - Ganglocaties / huizen</h3><p>Het maken van nepmeldingen in, op of rond ganglocaties of ganghuizen met als doel de politie te lokken is verboden.</p><p><b>Bij overtreding:</b> straf volgens categorie 2</p></div>
+<div class="article"><h3>Artikel 46 - Gangwar regels</h3><p>Alleen gangleiders mogen een oorlog verklaren tussen twee groeperingen.</p><p>Iedere deelnemer aan een gangwar heeft 1 leven. Is dat leven gebruikt, dan mag die speler niet opnieuw deelnemen.</p><p>Ook kills van politie tellen mee wanneer dit binnen dezelfde gangwar-periode gebeurt.</p><p>Een gangwar stopt wanneer:</p><ul><li>deze langer dan 48 uur duurt</li><li>één gang zich overgeeft</li><li>alle levens van één gang zijn verbruikt</li></ul><p>Ben je al dood geweest in een gangwar en meng je je opnieuw?</p><p><b>Bij overtreding:</b> straf volgens categorie 4</p></div>
+<div class="article"><h3>Artikel 46.1 - Onderwereld</h3><ul><li>Een taser binnen bereik gebruiken mag op eigen risico. Mis je je taser, dan ben je verplicht je over te geven wanneer er een vuurwapen binnen 10 meter aanwezig is.</li><li>Een schietende setup mag pas 10 minuten na de start van de achtervolging. Na de eerste geschoten setup mag je elke 5 minuten een nieuwe setup organiseren.</li><li>blokkade mag indien persoon uitgestapt in en op een veilige plek naast de weg staat!</li><li>Tijdens een achtervolging is het niet toegestaan om de politie te hinderen, te irriteren of op welke manier dan ook tegen te werken, ook niet als je een vriend probeert te helpen.</li><li>Voor een winkeloverval zijn minimaal 3 agenten vereist, voor een kleine bankoverval minimaal 5 agenten, voor een grote bankoverval minimaal 6 agenten en voor een juwelieroverval minimaal 7 agenten. Pas vanaf 7 agenten mag er een agent gegijzeld worden, maar onderhandelaar mag niet worden beschoten.</li><li>De roleplay moet altijd logisch blijven. Agenten hoeven tijdens een achtervolging niet direct doodgeschoten te worden; er kan bijvoorbeeld ook op autobanden geschoten worden. Zonder geldige reden een agent vermoorden valt onder RDM. Vanuit politiezijde wordt er ook niet zomaar geschoten, tenzij er sprake is van noodweer.</li></ul></div>
+<div class="article"><h3>Artikel 47 - Confiscatie</h3><p>Overheidseigendommen mogen nooit worden geconfisqueerd. Denk aan:</p><ul><li>Dienstwapens</li><li>Dienstmunitie</li><li>Handboeien</li></ul><p><b>Bij overtreding:</b> straf volgens categorie 3</p><p>Wapens, geld of andere items van een speler afnemen is alleen toegestaan wanneer die persoon nog leeft en er roleplay aan verbonden is.</p><p><b>Bij overtreding:</b> straf volgens categorie 5 (minimaal 1 dag ban).</p></div>
+<div class="article"><h3>Artikel 48 - Wraakacties</h3><p>Een wraakactie mag alleen worden gestart wanneer daar in roleplay bewijs voor is verzameld, bijvoorbeeld van moord of een geript wapen.</p><p><b>Bij overtreding:</b> straf volgens categorie 3</p></div>
+</section>
+<section class="apv-section" id="overig"><h2>Overige algemene regels</h2>
+<div class="article"><h3>Artikel 49 - Bodycams</h3><p>Bodycambeelden mogen als informatiebron gebruikt worden.</p><p>Dit houdt in:</p><ul><li>Overheidsdiensten mogen bodycams gebruiken</li><li>Overheidsmedewerkers moeten bodycams zichtbaar dragen als zij het als bewijs willen gebruiken</li><li>Burgers mogen met hun telefoon beelden of foto’s maken als bewijs</li></ul></div>
+<div class="article"><h3>Artikel 50 - Discord</h3><p>Externe Discordservers gebruiken voor roleplay-gerelateerde zaken is verboden. Wanneer je met meerdere personen in de stad bent, is streamen niet toegestaan.</p><p>Tijdens scenario’s moet je altijd gedempt en onhoorbaar zijn in Discord. Overtreding hiervan valt onder metagaming.</p></div>
+<div class="article"><h3>Artikel 51 - Demonstreren</h3><p>Demonstreren in grotere groepen is toegestaan mits:</p><ul><li>Er schriftelijke toestemming van staff is</li><li>Er één leider is aangewezen</li><li>Er een vaste demonstratielocatie is bepaald</li></ul><p><b>Bij overtreding:</b> alle betrokken spelers ontvangen straf volgens categorie 2.</p></div>
+<div class="article"><h3>Artikel 52 - Erotische roleplay</h3><p>Erotische roleplay is verboden. De enige uitzondering is dansen als danser in een club, binnen redelijke grenzen.</p><p><b>Bij overtreding:</b> straf volgens categorie 5 (minimaal 1 dag ban).</p></div>
+<div class="article"><h3>Artikel 53 - Startersgeld</h3><p>Het is niet toegestaan om startersgeld aan andere spelers te geven wanneer je zelf niet de intentie hebt om Zen Roleplay serieus te spelen.</p><p><b>Bij overtreding:</b> straf volgens categorie 9 (permanente ban).</p></div>
+<div class="article"><h3>Artikel 54 - Gebruik van voertuigen</h3><p>Van iedere bestuurder wordt realistisch rijgedrag verwacht. Aanvullende regels:</p><ul><li>Pitten boven 120 km/u is verboden</li><li>Vliegen zonder brevet is verboden</li><li>Een motorvoertuig pitten is nooit toegestaan</li><li>Brake checken mag alleen als dit realistisch gebeurt en is volledig op eigen risico</li><li>Off-road banden zijn cosmetisch en geven geen extra rechten</li><li>Alleen voertuigen die als off-road voertuig zijn aangewezen mogen off-road gebruikt worden</li><li>Voertuigen aanbieden via social media is toegestaan</li></ul><p><b>Bij overtreding:</b> straffen worden bepaald op basis van artikel 6 en artikel 15.</p></div>
+<div class="article"><h3>Artikel 55 - AFK kick voorkomen</h3><p>Het omzeilen van de automatische AFK-kick is verboden.</p><p><b>Bij overtreding:</b> straf volgens categorie 9 (permanente ban).</p></div>
+</section>
+<section class="apv-section" id="eiland"><h2>🏝️ Eilandregels</h2>
+<div class="article"><h3>Artikel 56 - Landen van helikopters / vliegtuigen</h3><p>Het landen van helikopters en vliegtuigen is toegestaan, zolang dit op een normale en realistische manier gebeurt.</p><p>De regels van de vliegschool zijn hierbij leidend.</p><p><b>Bij overtreding:</b> straf volgens categorie 2</p></div>
+<div class="article"><h3>Artikel 57 - Campen van niet-actieve drugslocaties</h3><p>Op het eiland is het campen van niet-actieve drugslocaties toegestaan, behalve wanneer je deel uitmaakt van een overheidsinstantie.</p><p><b>Bij overtreding:</b> straf volgens categorie 3</p></div>
+<div class="article"><h3>Artikel 58 - Samenwerking criminele organisaties</h3><p>Op het eiland is samenwerking tussen officiële en onofficiële groeperingen niet toegestaan.</p><p><b>Bij overtreding:</b> straf volgens categorie 4</p><p>Bij een tweede overtreding: een gangwarn.</p></div>
+<div class="article"><h3>Artikel 59 - Rippen op het eiland</h3><p>Op het eiland mogen alle illegale goederen die gerelateerd zijn aan de onderwereld worden geript.</p><p>Daar geldt ook dat ieder wapen ieder ander wapen mag rippen. Ook het doodschieten van de betrokken persoon is daar toegestaan, mits passend binnen de regels.</p><p><b>Bij overtreding:</b> straf volgens categorie 2</p></div>
+<div class="article"><h3>Artikel 60 - RDM op het eiland</h3><p>Op het eiland mag je iemand alleen doden wanneer je daar een geldige reden voor hebt.</p><p>Je mag personen wegsturen die daar geen zaken doen. Vertrekken zij niet, dan mag je hen doden.</p><p>Heb je geen geldige reden, dan valt dit alsnog onder RDM.</p><p><b>Bij overtreding:</b> straf volgens artikel 7.</p></div>
+<div class="article"><h3>Artikel 61 - Politie op het eiland</h3><p>De DSI mag speciale operaties uitvoeren op het eiland, mits daar voldoende aanleiding voor is en de korpschef toestemming heeft gegeven.</p><p>Per dag mag maximaal 2 keer toestemming gegeven worden.</p><p><b>Bij overtreding:</b> straf volgens categorie 2</p></div>
+</section>
+<section class="apv-section" id="staff"><h2>🛠️ Staff & systemen</h2>
+<div class="article"><h3>Artikel 62 - Staffleden / perm abuse</h3><p>Voor staffleden geldt dat het misbruiken van rechten of informatie verboden is.</p><p>Voorbeelden:</p><ul><li>Spelen met shownames</li><li>Interne of loginformatie doorspelen</li><li>Perms gebruiken voor eigen roleplay-voordeel</li><li>Niet correct omgaan met refunds</li><li>Onterecht mensen unbannen</li><li>Scenario’s behandelen waar je zelf bij betrokken bent</li></ul><p><b>Bij overtreding:</b> straf wordt bepaald door hogerop.</p><p>Bij ernstige of herhaalde overtredingen kan ontslag volgen.</p></div>
+<div class="article"><h3>Artikel 63 - Refunds</h3><p>Wanneer geld, voertuigen of items moeten worden ingeleverd en deze niet meer in bezit zijn, behoudt staff het recht om dit op een andere manier in-game te verrekenen.</p><p>Bijvoorbeeld: als iemand 100.000 euro heeft gescamd, kan een voertuig van ongeveer gelijke waarde worden afgenomen.</p><p>Een refund wordt onder andere afgewezen wanneer:</p><ul><li>Er APV-regels door jou zijn overtreden</li><li>Je bij een overval iemand doodt terwijl diegene niet meewerkt, terwijl je daarvoor een refund had moeten maken</li></ul><p><b>Bij overtreding:</b> het recht op refund vervalt en de aanvraag wordt afgekeurd.</p></div>
+</section>
+<section class="apv-section" id="onderwereld"><h2>🔥 Onderwereld</h2>
+<div class="article"><h3>Artikel 64 - Onderwereldregels</h3><p>Voor de onderwereld gelden aanvullende regels:</p><ul><li>Onderwereld-gerelateerde woorden gebruiken op Twitter voor je organisatie is verboden</li><li>Toxic gedrag via Darkchat of Twitter is verboden</li><li>Zwart geld scammen max tot 200K</li><li>Het forceren van iemand om iets te zeggen is verboden</li><li>Voor je iemand mag neerschieten, moet je diegene minimaal 3 keer waarschuwen en moet er minimaal 1 minuut achtervolging zijn geweest</li><li>Dit geldt ook voor schieten op banden</li><li>Tijd rekken</li><li>Doe je dit niet, dan kan het onder RDM vallen</li><li>Wanneer je iemand ript, is het niet toegestaan om deze persoon vervolgens te doden. Het rippen heeft als doel om iemand van zijn spullen te beroven, niet om diegene uit te schakelen</li><li>Vanaf 30 secon</li><li>Setups met politie mogen pas na 10 minuten</li><li>Je mag alleen een collega uitrekenen als die nog niet veroordeeld is (Pas vanaf 7 agenten in dienst)</li><li>Je mag niet rollen met mensen buiten jou groepering onder rollen valt samen criminele activiteiten doen.</li><li>Nadat er gericht is geschoten vanuit criminelen op politie/defensie hebben politie/defensie het recht om dodelijk vuur te gebruiken in het water.</li><li>F6-menu</li><li>Je mag wapens innemen zodra je een wapen, masker, holster of bodyvest hebt gezien</li><li>Je mag alleen fouilleren wanneer je zelf een dreiging vormt</li><li>Afboeien mag alleen binnen een scenario en met bewijs</li><li>Het F6-menu moet altijd correct worden gebruikt</li><li>Misbruik leidt tot een strike</li><li>In een greenzone mag het F6-menu nooit worden gebruikt</li></ul></div>
+<div class="subheading">APV-overtredingen</div><div class="article"><p>Wanneer een stafflid iemand binnen een groepering betrapt op cheats, volgt direct een strike en minpunten.</p><p>Bij overtredingen onder categorie 8 krijgt de gang alleen een sanctie als meer dan één lid dezelfde overtreding begaat.</p></div>
+<div class="subheading">Discordregels</div><div class="article"><ul><li>Je mag niet meer leden met ingame rollen en OW-Discordrollen hebben dan het toegestane maximum van 20</li><li>Nieuwe leden toevoegen aan de OW-Discord mag alleen via de juiste aanvraagprocedure</li><li>Reclame maken voor je groepering mag zolang dit netjes gebeurt</li></ul></div>
+<div class="subheading">Organisatie-terrein regels</div><div class="article"><ul><li>Wanneer zichtbaar een wapen in handen is geweest op je terrein, moeten poorten en deuren minimaal 5 minuten open blijven</li><li>Is er zonder suppressor geschoten op eigen terrein, dan moeten poorten en deuren direct open en minimaal 10 minuten open blijven</li><li>Hostages mogen maximaal 30 minuten op je terrein worden vastgehouden</li><li>Je mag je eigen gangdeuren niet openen met als doel een setup te creëren door over te stappen naar een andere gang</li><li>Wanneer je in-game bent, hoor je in het oortje van je organisatie te zitten op double mute</li></ul></div>
+<div class="subheading">Gangwars</div><div class="article"><ul><li>Een gangwar moet bij de OWC worden gemeld met reden</li><li>Beide groeperingen moeten akkoord gaan</li><li>Daarna wordt dit besproken en ingepland</li><li>KOS is niet toegestaan</li><li>Gangwars vinden plaats op een afgesproken locatie</li><li>Voor iedere kill moet een clip aanwezig zijn</li><li>Ontbreekt die clip, dan volgt een gangstrike</li><li>Wordt tijdens een gangwar een cheater gepakt, dan krijgt de volledige gang een strike</li></ul></div>
+<div class="subheading">Belangrijk</div><div class="article"><p>Een OWC mag afwijken van deze regels of de APV wanneer dit logisch is en goedgekeurd is door een HOWC.</p><p>In uitzonderlijke gevallen kan een gang direct worden opgeheven.</p><p>De onderwereldcoördinator heeft altijd het laatste woord.</p><p>Discussie voeren over beslissingen kan leiden tot extra sancties.</p><p>Ben je het ergens niet mee eens, dien dan een klacht in.</p><ul><li>Een taser binnen bereik gebruiken mag op eigen risico. Mis je je taser, dan ben je verplicht je over te geven wanneer er een vuurwapen binnen 10 meter aanwezig is.</li><li>Een schietende setup mag pas 10 minuten na de start van de achtervolging. Na de eerste geschoten setup mag je elke 5 minuten een nieuwe setup organiseren.</li><li>blokkade mag indien persoon uitgestapt in en op een veilige plek naast de weg staat!</li><li>Tijdens een achtervolging is het niet toegestaan om de politie te hinderen, te irriteren of op welke manier dan ook tegen te werken, ook niet als je een vriend probeert te helpen.</li><li>Voor een winkeloverval zijn minimaal 3 agenten vereist, voor een kleine bankoverval minimaal 5 agenten, voor een grote bankoverval minimaal 6 agenten en voor een juwelieroverval minimaal 7 agenten. Pas vanaf 7 agenten mag er een agent gegijzeld worden, maar onderhandelaar mag niet worden beschoten.</li><li>De roleplay moet altijd logisch blijven. Agenten hoeven tijdens een achtervolging niet direct doodgeschoten te worden; er kan bijvoorbeeld ook op autobanden geschoten worden. Zonder geldige reden een agent vermoorden valt onder RDM. Vanuit politiezijde wordt er ook niet zomaar geschoten, tenzij er sprake is van noodweer.</li></ul><p><b>Bij overtreding:</b> straf wordt bepaald door hogerop of door een Onderwereldcoördinator.</p></div>
+</section>
+<section class="apv-section" id="overig2"><h2>⚠️ Overig</h2>
+<div class="article"><h3>Artikel 65 - Combatstashen</h3><p>Het is verboden om tijdens of direct rondom een scenario goederen, wapens of andere spullen snel weg te stoppen om verlies te voorkomen.</p><p><b>Bij overtreding:</b> straf wordt bepaald door staff op basis van de situatie.</p></div>
+<div class="update-note"><b>REGELAANPASSING VANAF 06-06-2025 18:00</b></div>
+<div class="article"><h3>Artikel 66 – Jachtgeweren</h3><p>Een jachtgeweer mag uitsluitend worden gedragen en gebruikt binnen een aangewezen jachtgebied.</p><p>De drager dient tijdens de jacht de voorgeschreven jachtkleding te dragen.</p><p>Indien een persoon een jachtgeweer draagt of gebruikt buiten een aangewezen jachtgebied, of niet voldoet aan de kledingvoorschriften, wordt dit aangemerkt als onrechtmatig wapenbezit.</p><p>Overtreding van dit artikel kan leiden tot aanhouding en inbeslagname van het wapen.</p><p>Jachtgeweren mogen uitsluitend ontladen worden vervoerd en dienen tijdens transport in de kofferbak van een voertuig te zijn opgeborgen.</p><p><b>Strafbepaling:</b> Overtreding van dit artikel valt onder de Wet Wapens en Munitie en kan worden bestraft volgens de geldende strafrichtlijnen van de server.</p></div>
+<div class="article"><h3>Artikel 67 - Offroad</h3><p><b>APV – Offroad Voertuigen</b></p><p>Met ingang van heden vervallen regels omtrent offroad auto’s vanwege invoer offroad script</p></div>
+<div class="article"><h3>Artikel 68 - Streamen</h3><p>Live streamen bij een drugs locatie regels.</p><p>Bij pluk en verpak mag je gewoon streamen.</p><p>Bij de verkoop is dat niet toegestaan. (als je daar bent, en je wilt toch streamen even de stream uitzetten(zwartbeeld dat je kijkers het niet zien) tot je de locatie hebt gekregen en beetje verder op bent)</p><p>Eiland mag je altijd streamen</p></div>
+</section>
+</div>
+</section></div>
+</main>
+<footer><div class="footer-content"><div><a href="index.html" class="logo"><span>ZEN</span> ROLEPLAY</a><p>Officiële regelgeving van Zen Roleplay.</p></div></div><div class="copyright">© 2026 Zen Roleplay — Alle rechten voorbehouden.</div></footer>
 <script>
-
-
-function controleerCode(){
-
-
-const code = document.getElementById("code").value;
-
-
-if(code === "ZEN-AMBU-2026"){
-
-
-document.getElementById("login").style.display="none";
-
-
-document.getElementById("rapportageFormulier").style.display="block";
-
-
-alert("✅ Toegang verleend");
-
-
-}
-
-else{
-
-
-alert("❌ Verkeerde toegangscode");
-
-
-}
-
-
-}
-
-
-
-
-
-async function verstuurRapportage(){
-
-
-
-const rapportage = {
-
-
-medewerker:
-document.getElementById("medewerker").value,
-
-
-rang:
-document.getElementById("rang").value,
-
-
-datum:
-document.getElementById("datum").value,
-
-
-locatie:
-document.getElementById("locatie").value,
-
-
-prioriteit:
-document.getElementById("prioriteit").value,
-
-
-incident:
-document.getElementById("incident").value,
-
-
-patient:
-document.getElementById("patient").value,
-
-
-behandeling:
-document.getElementById("behandeling").value,
-
-
-transport:
-document.getElementById("transport").value,
-
-
-bestemming:
-document.getElementById("bestemming").value,
-
-
-ondertekening:
-document.getElementById("ondertekening").value
-
-
-};
-
-
-
-
-
-// Controle verplichte velden
-
-if(
-!rapportage.medewerker ||
-!rapportage.rang ||
-!rapportage.locatie ||
-!rapportage.incident
-){
-
-
-alert(
-"❌ Vul medewerker, rang, locatie en incident in!"
-);
-
-
-return;
-
-
-}
-
-
-
-
-
-try{
-
-
-const response = await fetch(
-
-"https://zen-ambulance-website.onrender.com/rapportage",
-
-{
-
-method:"POST",
-
-headers:{
-
-
-"Content-Type":"application/json"
-
-
-},
-
-
-body:JSON.stringify(rapportage)
-
-
-}
-
-);
-
-
-
-
-const resultaat = await response.text();
-
-
-
-console.log(
-"Backend:",
-resultaat
-);
-
-
-
-
-if(response.ok){
-
-
-alert(
-"🚑 Rapportage succesvol verzonden!"
-);
-
-
-
-// formulier leegmaken
-
-document.getElementById("rapportageFormulier").reset();
-
-
-}
-
-else{
-
-
-alert(
-"❌ Backend fout:\n" + resultaat
-);
-
-
-}
-
-
-
-}
-
-
-catch(error){
-
-
-console.error(error);
-
-
-alert(
-"❌ Backend niet bereikbaar."
-);
-
-
-}
-
-
-
-}
-
-
-
+const input=document.getElementById('search');
+const articles=[...document.querySelectorAll('.article')];
+input.addEventListener('input',()=>{const q=input.value.toLowerCase().trim();articles.forEach(a=>a.style.display=!q||a.innerText.toLowerCase().includes(q)?'':'none');});
 </script>
-
-
 </body>
-
 </html>
-
-
-
